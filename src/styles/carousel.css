@@ -1,0 +1,102 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: unset;
+  clip-path: inset(-100vw -100vw -100vw -5vw);
+}
+
+.swiper-3d {
+  perspective: 500px !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #d9d9d9;
+  border-radius: 1rem;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) -4px 10px 10px 0px;
+  opacity: 0;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+  --tw-bg-opacity: 0.5;
+  border-radius: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 20px 0px;
+}
+
+.swiper-slide-active > img {
+  opacity: 1 !important;
+  --tw-bg-opacity: 0.5;
+}
+
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom {
+  display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  display: none;
+  z-index: 9999;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, -2.5rem);
+  width: 5rem;
+  left: auto;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, -2.5rem);
+  width: 5rem;
+  right: auto;
+}
+
+.swiper-button-prev {
+  background-image: url("/src/assets/fragments/left-arrow.svg") !important;
+  background-repeat: no-repeat;
+  height: 5rem;
+  top: var(--swiper-navigation-top-offset, 48%);
+}
+
+.swiper-button-next {
+  background-image: url("/src/assets/fragments/right-arrow.svg") !important;
+  background-repeat: no-repeat;
+  height: 5rem;
+  top: var(--swiper-navigation-top-offset, 48%);
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+}
