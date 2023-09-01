@@ -10,3 +10,30 @@
 body {
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .nav,
+  .nav-active {
+    @apply relative font-medium text-black cursor-pointer;
+  }
+
+  .nav::after {
+    @apply content-[''] absolute bg-[#004AAD] h-1 w-[0%] left-0 -bottom-2 rounded-sm duration-300;
+  }
+
+  .nav:hover::after {
+    @apply w-full;
+  }
+
+  .nav-active {
+    @apply text-[#004AAD];
+  }
+
+  .nav-active::after {
+    @apply content-[''] absolute bg-[#004AAD] h-1 w-full left-0 -bottom-2 rounded-sm duration-100;
+  }
+}
