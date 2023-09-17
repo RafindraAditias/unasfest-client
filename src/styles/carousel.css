@@ -73,14 +73,14 @@
 .swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset, -2.5rem);
   width: 5rem;
-  left: auto;
+  /* left: auto; */
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
   left: var(--swiper-navigation-sides-offset, -2.5rem);
   width: 5rem;
-  right: auto;
+  /* right: auto; */
 }
 
 .swiper-button-prev {

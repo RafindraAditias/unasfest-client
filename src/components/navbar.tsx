@@ -1,14 +1,33 @@
 import graphicLogo from "@/assets/logo/graphic-logo.png";
 import unasLogo from "@/assets/logo/logo-unasfest.png";
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [currentNav, setCurrentNav] = useState<string>("Beranda");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   const navContents = [
     {
-      path: "beranda",
+      path: "/",
       name: "Beranda",
     },
     {
@@ -34,36 +53,36 @@ function Navbar() {
   ];
 
   return (
-    <header className="w-screen h-[80px] fixed z-50 bg-white border-b-2 border-solid border-[rgba(0, 0, 0, 0.10)]">
-      <nav className="w-full max-w-[1200px] h-full flex items-center justify-between gap-10 m-auto">
-        <div className="flex w-40 h-12 gap-2 ml-5">
+    <header
+      className={`w-screen h-[100px] sticky mb-20 z-50 bg-white border-b-2 border-solid border-[rgba(0, 0, 0, 0.10)] ${
+        visible ? "top-0" : "-top-32"
+      } duration-200`}
+    >
+      <nav className="w-4/5 max-w-[1440px] h-full flex items-center justify-between m-auto px-3">
+        <div className="flex gap-4">
           <img
             src={graphicLogo}
             alt="logo unas graphic"
             className="object-contain"
-            width={50}
-            height={50}
+            width={57}
+            height={57}
           />
           <img
             src={unasLogo}
             alt="logo unas fest"
             className="object-contain"
-            width={100}
-            height={50}
+            width={130}
+            height={55}
           />
         </div>
 
-        <div>
-          <ul className="flex gap-12 font-roboto font-semibold text-base tracking-wide mr-5">
+        <div className="text-xl font-bold tracking-wide">
+          <ul className="flex gap-16">
             {navContents.map(({ path, name }, index) => {
               return (
                 <li key={index}>
                   <Link
                     to={path}
-                    spy={true}
-                    smooth={true}
-                    offset={-200}
-                    duration={50}
                     onClick={() => setCurrentNav(name)}
                     className={`${currentNav === name ? "nav-active" : "nav"}`}
                   >

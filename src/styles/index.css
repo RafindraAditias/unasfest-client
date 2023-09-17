@@ -9,31 +9,50 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@layer utilities {
+@layer components {
   .nav,
   .nav-active {
-    @apply relative font-medium text-black cursor-pointer;
+    @apply relative cursor-pointer;
+  }
+
+  .nav {
+    @apply text-black opacity-60 font-medium;
+  }
+
+  .nav-active {
+    @apply text-active-blue font-bold;
+  }
+
+  .nav:hover {
+    @apply text-active-blue opacity-100;
   }
 
   .nav::after {
-    @apply content-[''] absolute bg-[#004AAD] h-1 w-[0%] left-0 -bottom-2 rounded-sm duration-300;
+    @apply content-[''] absolute bg-active-blue h-1 w-[0%] left-0 -bottom-2 rounded-sm duration-300;
   }
 
   .nav:hover::after {
-    @apply w-full;
-  }
-
-  .nav-active {
-    @apply text-[#004AAD];
+    @apply w-[90%];
   }
 
   .nav-active::after {
-    @apply content-[''] absolute bg-[#004AAD] h-1 w-full left-0 -bottom-2 rounded-sm duration-100;
+    @apply content-[''] absolute bg-active-blue h-1 w-[90%] left-0 -bottom-2 rounded-sm duration-100;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-5xl font-bold leading-normal tracking-[0.2px];
+  }
+
+  h2 {
+    @apply text-4xl leading-normal font-semibold;
   }
 }

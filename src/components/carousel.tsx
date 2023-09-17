@@ -4,6 +4,7 @@ import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "styles/carousel.css";
+import { useEffect, useState } from "react";
 
 interface IProps extends SwiperProps {
   images: Array<string>;
@@ -11,6 +12,10 @@ interface IProps extends SwiperProps {
 
 function Carousel(props: IProps) {
   const { images, ...rest } = props;
+  const [carouselImages, setCarouselImages] = useState(images);
+  useEffect(() => {
+    setCarouselImages((current) => current.concat(images));
+  }, [images]);
 
   return (
     <Swiper
@@ -20,10 +25,10 @@ function Carousel(props: IProps) {
       navigation={true}
       modules={[Navigation, EffectCoverflow, Autoplay]}
       effect="coverflow"
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -33,14 +38,14 @@ function Carousel(props: IProps) {
       className="mySwiper"
       {...rest}
     >
-      {images.map((image, index) => (
+      {carouselImages.map((image, index) => (
         <SwiperSlide key={index}>
           <img
             src={image}
             alt="carousel"
             className="object-cover w-10 rounded-2xl opacity-50"
-            width="200"
-            height="500"
+            width={597}
+            height={521}
             loading="eager"
           />
         </SwiperSlide>
