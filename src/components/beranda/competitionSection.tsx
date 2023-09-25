@@ -6,6 +6,7 @@ import cube from "@/assets/fragments/cube.svg";
 import debatePoster from "@/assets/content/debate-poster.webp";
 
 import { Card, CardContent } from "@/components/ui/card";
+import Blur from "../ui/blur";
 
 function CompetitionSection() {
   const competitionContents = [
@@ -63,7 +64,7 @@ function CompetitionSection() {
       />
 
       <Card className="py-24">
-        <CardContent className="w-full flex flex-col justify-center items-center gap-20">
+        <CardContent className="w-full flex flex-col justify-center items-center gap-24">
           {competitionContents.map((content, index) => (
             <div
               key={index}
@@ -81,18 +82,16 @@ function CompetitionSection() {
                 />
               </div>
               <div className="w-1/3 flex flex-col py-8 px-0 items-start">
-                <h1 className="text-3xl leading-tight font-semibold tracking-normal capitalize text-left mb-8">
+                <h1 className="text-4xl leading-tight font-semibold tracking-normal capitalize text-left mb-8">
                   {content.title}
                 </h1>
-                <p className="text-base text-left mb-8">
-                  {content.description}
-                </p>
+                <p className="text-lg text-left mb-8">{content.description}</p>
                 <div className="flex gap-2">
                   <button className="bg-[#004AAD] rounded-3xl text-white py-1 px-4 font-semibold">
                     Daftar Sekarang
                   </button>
                   <button className="border-[#004AAD] border-2 rounded-3xl text-[#4E2CA3] py-1 px-4 font-semibold">
-                    Informasi lebih lanjut{" "}
+                    Informasi lebih lanjut
                   </button>
                 </div>
               </div>
@@ -125,10 +124,33 @@ function CompetitionSection() {
         </CardContent>
       </Card>
 
-      <div className="w-[450px] h-[450px] absolute -right-[700px] -top-[50px] bg-[#00BF63] rounded-full blur-[350px] -z-50"></div>
-      <div className="w-[450px] h-[450px] absolute -left-[700px] top-20 bg-[#FFDE59] rounded-full blur-[350px] -z-50"></div>
-      <div className="w-[450px] h-[450px] absolute -left-[50px] bottom-20 bg-[#00BF63] rounded-full blur-[350px] -z-50"></div>
-      <div className="w-[450px] h-[450px] absolute -right-[50px] bottom-1/3 bg-[#6CC8FC] rounded-full blur-[350px] -z-50"></div>
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] -left-1/2 top-0 bg-[#FFDE59] bg-opacity-60"
+      />
+
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] -right-1/3 -top-[10%] bg-[#00BF63] bg-opacity-60"
+      />
+
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] -left-1/4 top-1/2 bg-[#00BF63] bg-opacity-70"
+      />
+
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] left-2/4 top-1/4 bg-[#004AADB2]"
+      />
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] left-2/3 bottom-1/4 bg-[#6CC8FCB2]"
+      />
+      <Blur
+        blurRadius={350}
+        className="w-[470px] h-[480px] right-3/4 -bottom-[15%] bg-[#CB6CE699]"
+      />
     </section>
   );
 }

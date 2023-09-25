@@ -5,7 +5,15 @@ const GaleriSection = lazy(() => import("@/components/beranda/galeriSection"));
 const CompetitionSection = lazy(
   () => import("@/components/beranda/competitionSection")
 );
-
+const TimelineSection = lazy(
+  () => import("@/components/beranda/timelineSection")
+);
+const BenefitSection = lazy(
+  () => import("@/components/beranda/benefitSection")
+);
+const ContactSection = lazy(
+  () => import("@/components/beranda/contactSection")
+);
 export default function Beranda() {
   return (
     <main className="w-4/5 max-w-screen-xl m-auto px-3">
@@ -19,6 +27,9 @@ export default function Beranda() {
         <AboutSection />
         <GaleriSection />
         <CompetitionSection />
+        <TimelineSection />
+        <BenefitSection />
+        <ContactSection />
       </Suspense>
     </main>
   );
