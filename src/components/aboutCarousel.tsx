@@ -3,14 +3,14 @@ import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "styles/carousel.css";
+import "styles/aboutCarousel.css";
 import { useEffect, useState } from "react";
 
 interface IProps extends SwiperProps {
   images: Array<string>;
 }
 
-function Carousel(props: IProps) {
+function AboutCarousel(props: IProps) {
   const { images, ...rest } = props;
   const [carouselImages, setCarouselImages] = useState(images);
   useEffect(() => {
@@ -25,10 +25,10 @@ function Carousel(props: IProps) {
       navigation={true}
       modules={[Navigation, EffectCoverflow, Autoplay]}
       effect="coverflow"
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -54,4 +54,4 @@ function Carousel(props: IProps) {
   );
 }
 
-export default Carousel;
+export default AboutCarousel;
