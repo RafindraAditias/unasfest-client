@@ -59,8 +59,8 @@ function Navbar() {
         menuOpen ? "top-0" : "-top-32"
       } z-[9999999999]`}
     >
-      <nav className="w-screen h-[100px] top-0 z-50 bg-white border-b-2 border-solid border-[rgba(0, 0, 0, 0.10)]">
-        <div className="w-4/5 max-w-[1440px] h-full flex items-center justify-between m-auto px-3">
+      <nav className="w-full h-[100px] top-0 z-50 bg-white border-b-2 border-solid border-[rgba(0, 0, 0, 0.10)]">
+        <div className="w-4/5 max-w-[1440px] h-full flex items-center justify-between m-auto">
           <div className="flex gap-4">
             <img
               src={graphicLogo}
@@ -79,7 +79,7 @@ function Navbar() {
           </div>
 
           <div className="text-xl font-bold tracking-wide">
-            <button
+            <div
               className="lg:hidden"
               onClick={() => setMenuOpen((prev) => !prev)}
             >
@@ -92,7 +92,7 @@ function Navbar() {
                   <Menu size={40} color="#004AAD" />
                 </div>
               )}
-            </button>
+            </div>
 
             <ul
               className={`w-full flex flex-col absolute -z-50 ${

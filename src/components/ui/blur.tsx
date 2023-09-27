@@ -9,7 +9,7 @@ const Blur = React.forwardRef<HTMLDivElement, Props>(
       <div
         className={cn(
           `w-[250px] h-[250px] absolute rounded-full 
-          -z-10 blur-[300px] ${className}`
+          -z-50 blur-[300px] ${className}`
         )}
         ref={ref}
         {...props}

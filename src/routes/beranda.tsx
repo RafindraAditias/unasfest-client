@@ -16,7 +16,7 @@ const ContactSection = lazy(
 );
 export default function Beranda() {
   return (
-    <main className="w-4/5 max-w-screen-xl m-auto px-3">
+    <main className="w-full max-w-screen-xl m-auto lg:px-3 lg:w-4/5">
       <Suspense
         fallback={
           <p className="w-full h-screen flex justify-center items-center text-center">
