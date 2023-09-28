@@ -17,7 +17,7 @@ html {
 }
 
 .text-pretty {
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .custom-card {
@@ -59,6 +59,9 @@ html {
 }
 
 @layer base {
+  #root {
+    @apply font-roboto overflow-clip;
+  }
   h1 {
     @apply text-5xl font-bold leading-normal tracking-[0.2px];
   }

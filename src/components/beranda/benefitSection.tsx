@@ -1,56 +1,15 @@
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import BenefitCarousel from "./benefitCarousel";
 
 function BenefitSection() {
   return (
     <section className="mt-20 font-inter">
-      <Card className="p-16">
-        <CardTitle className="text-center text-5xl font-semibold mb-14 tracking-normal">
+      <Card className="w-[90%] p-5 m-auto border border-active-blue overflow-hidden lg:p-16 lg:w-full lg:border-none">
+        <CardTitle className="text-[28px] text-center font-semibold mb-12 tracking-wide leading-normal text-pretty px-5 lg:text-5xl lg:mb-14">
           Benefit dari Kompetisi UnasFest 2023
         </CardTitle>
-        <CardContent className="w-3/4 flex mx-auto flex-wrap content-center justify-center">
-          <div className="text-center p-5 basis-96">
-            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px]"></div>
-            <h1 className="text-[22px] font-semibold tracking-normal mb-4">
-              E-Certificate
-            </h1>
-            <p className="text-base font-normal tracking-normal leading-6">
-              Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus
-              mattis etiam.
-            </p>
-          </div>
-
-          <div className="text-center p-5 basis-96">
-            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px]"></div>
-            <h1 className="text-[22px] font-semibold tracking-normal mb-4">
-              Hadiah Jutaan Rupiah
-            </h1>
-            <p className="text-base font-normal tracking-normal leading-6">
-              Velit nulla eu tortor elit sed. Volutpat ornare mi tempor, hac
-              morbi faucibus.
-            </p>
-          </div>
-
-          <div className="text-center p-5 basis-96">
-            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px]"></div>
-            <h1 className="text-[22px] font-semibold tracking-normal mb-4">
-              Enim scelerisque dictum
-            </h1>
-            <p className="text-base font-normal tracking-normal leading-6">
-              Turpis eget ut sed vitae in sapien egestas ultrices feugiat.
-              Elementum platea.
-            </p>
-          </div>
-
-          <div className="text-center p-5 basis-96">
-            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px]"></div>
-            <h1 className="text-[22px] font-semibold tracking-normal mb-4">
-              Vulputate et enim
-            </h1>
-            <p className="text-base font-normal tracking-normal leading-6">
-              Amet, eros nisl vestibulum tincidunt pellentesque. Congue id
-              sapien dictum a.
-            </p>
-          </div>
+        <CardContent className="benefit-carousel w-full lg:w-3/4 flex mx-auto flex-wrap content-center justify-center p-0">
+          <BenefitCarousel />
         </CardContent>
       </Card>
     </section>

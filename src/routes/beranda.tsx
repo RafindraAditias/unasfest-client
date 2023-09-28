@@ -14,6 +14,7 @@ const BenefitSection = lazy(
 const ContactSection = lazy(
   () => import("@/components/beranda/contactSection")
 );
+
 export default function Beranda() {
   return (
     <main className="w-full max-w-screen-xl m-auto lg:px-3 lg:w-4/5">

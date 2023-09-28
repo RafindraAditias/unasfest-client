@@ -1,10 +1,10 @@
-.swiper {
+.timeline-swiper .swiper {
   width: 100%;
   height: 100%;
   overflow: unset;
 }
 
-.swiper-slide {
+.timeline-swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #004aad;
@@ -15,14 +15,14 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.timeline-swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.tes .swiper-slide::before {
+.timeline-swiper .tes .swiper-slide::before {
   content: "";
   position: absolute;
   right: 30%;
@@ -32,7 +32,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.swiper-slide::after {
+.timeline-swiper .swiper-slide::after {
   content: "";
   background: #0984ea;
   position: absolute;
@@ -41,11 +41,6 @@
   height: 31px;
 }
 
-.swiper-slide:last-child::after {
+.timeline-swiper .swiper-slide:last-child::after {
   display: none;
-}
-
-#slides {
-  /* overflow-y: auto; */
-  /* overflow-x: ; */
 }

@@ -8,7 +8,7 @@ import Blur from "../ui/blur";
 function AboutSection() {
   return (
     <section id="beranda" className="w-full h-fit mt-10 lg:mt-32 xl:mt-48">
-      <div className="w-4/5 max-w[1440px] m-auto flex flex-col items-center gap-16 lg:w-full lg:flex-row lg:items-start lg:gap-10">
+      <div className="relative w-4/5 max-w[1440px] m-auto flex flex-col items-center gap-16 lg:w-full lg:flex-row lg:items-start lg:gap-10">
         <div className="w-full basis-4/6">
           <h2 className="text-2xl leading-normal font-bold text-active-blue mb-3">
             Universitas Nasional
@@ -64,7 +64,7 @@ function AboutSection() {
 
         <Blur className="bg-active-blue" />
         <Blur className="bg-[#00BF63] bottom-0 left-[20%]" />
-        <Blur className="top-16 left-1/3 bg-[#6CC8FC] " />
+        <Blur className="top-16 left-1/3 bg-[#6CC8FC]" />
         <Blur className="top-[60%] left-[80%] bg-[#FFDE59]" />
         <Blur className="top-0 right-0 bg-[#CB6CE6]" />
       </div>

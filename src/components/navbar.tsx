@@ -3,6 +3,7 @@ import unasLogo from "@/assets/logo/logo-unasfest.png";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { navData } from "@/data/navbar";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -25,33 +26,6 @@ function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   });
-
-  const navContents = [
-    {
-      path: "/",
-      name: "Beranda",
-    },
-    {
-      path: "lomba",
-      name: "Lomba",
-    },
-    {
-      path: "galeri",
-      name: "Galeri",
-    },
-    {
-      path: "sponsorship",
-      name: "Sponsorship",
-    },
-    {
-      path: "ranking",
-      name: "Ranking",
-    },
-    {
-      path: "tentang",
-      name: "Tentang",
-    },
-  ];
 
   return (
     <header
@@ -99,7 +73,7 @@ function Navbar() {
                 menuOpen ? "top-24" : "-top-96"
               } py-6 left-0 text-center gap-6 bg-white duration-200 lg:flex-row lg:z-0 lg:bg-transparent lg:w-fit lg:static lg:gap-16`}
             >
-              {navContents.map(({ path, name }, index) => {
+              {navData.map(({ path, name }, index) => {
                 return (
                   <li key={index}>
                     <NavLink
