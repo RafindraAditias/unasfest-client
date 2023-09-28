@@ -3,9 +3,6 @@ import sphere from "@/assets/fragments/sphere.svg";
 import sphere2 from "@/assets/fragments/sphere2.svg";
 import sphere3 from "@/assets/fragments/sphere3.svg";
 import cube from "@/assets/fragments/cube.svg";
-import debatePoster from "@/assets/content/debate-poster.webp";
-import karyaTulisPoster from "@/assets/content/karya-tulis-poster.webp";
-import seminarPoster from "@/assets/content/seminar-nasional-poster.webp";
 
 import {
   Card,
@@ -16,41 +13,12 @@ import {
 } from "@/components/ui/card";
 import Blur from "../ui/blur";
 import { Button } from "../ui/button";
-
-const competitionContents = [
-  {
-    poster: debatePoster,
-    title: "Kompetisi Debat Bahasa Indonesia (KDBI)",
-    description:
-      "Kegiatan Kompetisi Debat Bahasa Indonesia dan bahasa inggris merupakan kompetisi debat dimana peserta beradu argumen dan pemikiran terkait isu-isu kontemporer dari berbagai aspek yakni sosial, politik, budaya, teknologi, ekonomi, energi, hukum, kesehatan dan lain sebagainya.",
-  },
-
-  {
-    poster: debatePoster,
-    title: "English Debate Competition (EDC)",
-    description:
-      "The English Debate Competition (EDC) is an English language debate competition where participants debate arguments and thoughts related to contemporary issues from various aspects, namely social, political, cultural, technological, economic, energy, legal, health and so on. Therefore, the English Debate Competition (EDC) aims to improve participants' ability to speak in public, develop analytical and critical thinking skills, and strengthen their ability to argue using effective and persuasive language.",
-  },
-
-  {
-    poster: karyaTulisPoster,
-    title: "Lomba Karya Tulis Ilmiah",
-    description:
-      "Lomba Karya Tulis Ilmiah adalah kompetisi karya tulis yang diperoleh dari hasil observasi dan penelitian dalam bidang dan metode tertentu, dengan penulisan sistematis dan menggunakan bahasa Indonesia yang baik dan benar serta isinya dapat dipertanggung jawabkan kebenarannya atau keilmiahannya.",
-  },
-
-  {
-    poster: seminarPoster,
-    title: "Seminar Nasional",
-    description:
-      "Seminar merupakan pertemuan kelompok yang membahas dan menemukan solusi dari topik atau masalah yang relevan dengan mempresentasikan dan menjelaskan solusi tersebut yang dilakukan oleh individu yang ahli di bidangnya. Hal yang menjadi topik pembahasan kita saat ini dimana kita akan membahas terkait...",
-  },
-];
+import { competitionData } from "@/data/competition";
 
 function CompetitionSection() {
   return (
     <section id="lomba" className="relative w-full h-full mt-36 text-center">
-      <div className="hidden lg:block w-3/5 m-auto mb-8">
+      <div className="hidden w-3/5 m-auto mb-8 lg:block">
         <h1 className="text-5xl font-semibold tracking-normal capitalize mb-4">
           universitas Nasional Festival 2023
         </h1>
@@ -83,7 +51,7 @@ function CompetitionSection() {
         </CardHeader>
 
         <CardContent className="w-full flex flex-col justify-center items-center gap-24">
-          {competitionContents.map((content, index) => (
+          {competitionData.map((content, index) => (
             <div
               key={index}
               className={`flex flex-col gap-8 lg:justify-center lg:gap-16 ${
@@ -155,17 +123,13 @@ function CompetitionSection() {
             height={200}
           />
         </CardContent>
+        <Blur className="w-[470px] h-[480px] -left-1/2 top-0 bg-[#FFDE59] bg-opacity-60" />
+        <Blur className="w-[470px] h-[480px] -right-1/3 -top-[10%] bg-[#00BF63] bg-opacity-60" />
+        <Blur className="w-[470px] h-[480px] -left-1/4 top-1/2 bg-[#00BF63] bg-opacity-70" />
+        <Blur className="w-[470px] h-[480px] left-2/4 top-1/4 bg-[#004AADB2]" />
+        <Blur className="w-[470px] h-[480px] left-2/3 bottom-1/4 bg-[#6CC8FCB2]" />
+        <Blur className="w-[470px] h-[480px] right-3/4 -bottom-[15%] bg-[#CB6CE699]" />
       </Card>
-
-      <Blur className="w-[470px] h-[480px] -left-1/2 top-0 bg-[#FFDE59] bg-opacity-60" />
-
-      <Blur className="w-[470px] h-[480px] -right-1/3 -top-[10%] bg-[#00BF63] bg-opacity-60" />
-
-      <Blur className="w-[470px] h-[480px] -left-1/4 top-1/2 bg-[#00BF63] bg-opacity-70" />
-
-      <Blur className="w-[470px] h-[480px] left-2/4 top-1/4 bg-[#004AADB2]" />
-      <Blur className="w-[470px] h-[480px] left-2/3 bottom-1/4 bg-[#6CC8FCB2]" />
-      <Blur className="w-[470px] h-[480px] right-3/4 -bottom-[15%] bg-[#CB6CE699]" />
     </section>
   );
 }

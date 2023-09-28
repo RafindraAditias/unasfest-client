@@ -1,18 +1,44 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+
+import "@/styles/benefitCarousel.css";
+
+// import required modules
+import { Grid, Pagination } from "swiper/modules";
+
 export default function Lomba() {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
-      <div className="w-[1920px] h-fit p-10 border-[5px] border-red-600 text-center">
-        1920px
-      </div>
-      <div className="w-[1440px] h-fit p-10 border-2 border-blue-500 text-center">
-        1440px
-      </div>
-      <div className="w-[1280px] h-fit p-10 border-2 border-green-500 text-center">
-        1280px
-      </div>
-      <div className="w-[1200px] h-fit p-10 border-2 border-cyan-300-500 text-center">
-        1200px
-      </div>
+    <div className="benefit-carousel">
+      <Swiper
+        slidesPerView={4}
+        grid={{
+          rows: 2,
+          fill: "row",
+        }}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Grid, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper>
     </div>
   );
 }
