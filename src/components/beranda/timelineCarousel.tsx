@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper/modules";
-// Import Swiper styles
+import { Pagination } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "styles/timelineCarousel.css";
@@ -12,8 +12,7 @@ const TimelineCarousel = () => {
       slidesPerView="auto"
       spaceBetween={30}
       freeMode={true}
-      mousewheel={true}
-      modules={[Mousewheel, Pagination]}
+      modules={[Pagination]}
       className="mySwiper"
     >
       {timelineData.map((timeline, index) => {

@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
-import { lazy, Fragment } from "react";
-
-const Navbar = lazy(() => import("@/components/navbar"));
+import { Suspense } from "react";
+import Navbar from "@/components/navbar";
+import Loading from "@/components/loading";
 
 export default function Root() {
   return (
-    <Fragment>
+    <>
       <Navbar />
-      <Outlet />
-    </Fragment>
+      <Suspense fallback={<Loading />}>
+        <Outlet />
+      </Suspense>
+    </>
   );
 }
