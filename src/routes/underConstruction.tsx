@@ -17,7 +17,11 @@ export default function UnderConstruction() {
             <dotlottie-player
               loop
               autoplay
-              src="http://localhost:3000/under-construction.lottie"
+              src={`${
+                process.env.NODE_ENV === "production"
+                  ? "https://unasfest.vercel.app/under-construction.lottie"
+                  : "http://localhost:3000/under-construction.lottie"
+              }`}
             />
           </div>
         </Suspense>
