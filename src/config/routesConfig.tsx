@@ -1,22 +1,26 @@
-import Beranda from "@/routes/beranda";
-import Lomba from "@/routes/lomba";
-import Root from "@/routes/root";
+/* eslint-disable react-refresh/only-export-components */
+import { lazy } from "react";
 import { Route, createRoutesFromElements } from "react-router-dom";
+
+const Root = lazy(() => import("@/routes/root"));
+const Beranda = lazy(() => import("@/routes/beranda"));
+const Lomba = lazy(() => import("@/routes/lomba"));
+const UnderConstruction = lazy(() => import("@/routes/underConstruction"));
 
 export const routesConfig = createRoutesFromElements(
   <Route
     path="/"
     element={<Root />}
-    errorElement={
-      <div className="w-full h-screen grid place-items-center">
-        <p>not found</p>
-      </div>
-    }
+    // errorElement={
+    //   <div className="w-full h-screen grid place-items-center">
+    //     <p>not found</p>
+    //   </div>
+    // }
   >
     <Route index element={<Beranda />} />
 
     <Route
-      path="lomba"
+      path="lomba/*"
       element={<Lomba />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
@@ -27,11 +31,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="galeri"
-      element={
-        <div className="w-full h-screen grid place-items-center">
-          <p>Galeri Page</p>
-        </div>
-      }
+      element={<UnderConstruction />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di galeri</p>
@@ -41,11 +41,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="sponsorship"
-      element={
-        <div className="w-full h-screen grid place-items-center">
-          <p>Sponsorship Page</p>
-        </div>
-      }
+      element={<UnderConstruction />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Sponsorship</p>
@@ -55,11 +51,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="ranking"
-      element={
-        <div className="w-full h-screen grid place-items-center">
-          <p>Ranking Page</p>
-        </div>
-      }
+      element={<UnderConstruction />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Ranking</p>
@@ -69,11 +61,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="tentang"
-      element={
-        <div className="w-full h-screen grid place-items-center">
-          <p>Tentang Page</p>
-        </div>
-      }
+      element={<UnderConstruction />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Tentang</p>

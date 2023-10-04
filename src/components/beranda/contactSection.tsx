@@ -8,71 +8,51 @@ import {
 import {} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import whatsappIcon from "@/assets/icons/whatsapp.svg";
+import mascotLogo from "@/assets/logo/maskot.webp";
 
 function ContactSection() {
+  const navigate = useNavigate();
   return (
-    <section className="mt-20">
-      <Card className="custom-card text-start px-28 py-16">
-        <CardTitle className="text-5xl font-semibold leading-normal tracking-tight">
+    <section className="mt-20 lg:overflow-x-clip">
+      <Card className="custom-card overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
+        <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl">
           Apakah Kami Dapat Membantu?
+          <div className="absolute -top-28 right-0 z-10 hidden lg:inline-block">
+            <img
+              src={mascotLogo}
+              alt="maskot unasfest"
+              width={408}
+              height={408}
+              className="max-w-[408px] w-full"
+            />
+          </div>
         </CardTitle>
-        <CardDescription className="text-white font-inter text-2xl leading-normal tracking-tight font-normal mb-20">
+        <CardDescription className="w-full text-white font-inter text-base leading-normal tracking-wide font-normal mb-5 lg:mb-20 md:text-2xl lg:w-8/12">
           Ada masalah? Yuk hubungi contact person kami!
         </CardDescription>
-        <CardContent className="relative p-0 flex justify-start gap-8">
-          <Button className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold">
-            <Link to="/lomba" preventScrollReset>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_594_5123)">
-                  <path
-                    d="M20 9.74272C20 15.1231 15.6044 19.4848 10.181 19.4848C8.45991 19.4848 6.84319 19.0446 5.43581 18.2737L0 20L1.77194 14.7716C0.878469 13.3042 0.363909 11.5812 0.363909 9.74207C0.364561 4.36169 4.75886 0 10.1823 0C15.605 0.00130433 20 4.36234 20 9.74272ZM10.1803 1.55346C5.62885 1.55346 1.9265 5.22777 1.9265 9.74468C1.9265 11.5368 2.51084 13.1959 3.49887 14.5459L2.46845 17.587L5.63929 16.5794C6.94362 17.435 8.50426 17.9333 10.1803 17.9333C14.7318 17.9333 18.4355 14.2596 18.4355 9.74272C18.4368 5.22777 14.7324 1.55346 10.1803 1.55346ZM15.1394 11.9868C15.0781 11.8883 14.9177 11.8283 14.6777 11.7084C14.4383 11.5884 13.2533 11.0112 13.0336 10.9329C12.8118 10.8527 12.6514 10.8123 12.491 11.0516C12.3325 11.291 11.8707 11.8284 11.7292 11.9888C11.589 12.1486 11.4488 12.1688 11.2081 12.0507C10.9675 11.9294 10.1914 11.679 9.27186 10.8658C8.55643 10.2318 8.07317 9.4512 7.93361 9.21186C7.79209 8.97316 7.91926 8.84403 8.03861 8.72534C8.14622 8.61773 8.27926 8.44621 8.39991 8.306C8.52056 8.16709 8.56034 8.06861 8.64056 7.90883C8.71947 7.74905 8.67969 7.61014 8.62034 7.48948C8.56034 7.36949 8.07969 6.19559 7.87818 5.71755C7.67796 5.24016 7.47775 5.31907 7.33688 5.31907C7.19666 5.31907 7.03623 5.29951 6.8758 5.29951C6.71536 5.29951 6.4545 5.35755 6.23472 5.5969C6.01494 5.83624 5.39277 6.41341 5.39277 7.58861C5.39277 8.76512 6.25428 9.89924 6.37493 10.0584C6.49623 10.2168 8.04056 12.7075 10.4868 13.6635C12.9344 14.619 12.9344 14.3001 13.3753 14.2596C13.8175 14.2192 14.7996 13.6825 14.9992 13.1255C15.2001 12.566 15.2001 12.0866 15.1394 11.9868Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_594_5123">
-                    <rect width="20" height="20" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              Contact 1
-            </Link>
+        <CardContent className="relative flex justify-start gap-8 p-0">
+          <Button
+            onClick={() => navigate("/lomba", { preventScrollReset: true })}
+            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
+          >
+            <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
+            Contact 1
           </Button>
 
-          <Button className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <g clip-path="url(#clip0_594_5123)">
-                <path
-                  d="M20 9.74272C20 15.1231 15.6044 19.4848 10.181 19.4848C8.45991 19.4848 6.84319 19.0446 5.43581 18.2737L0 20L1.77194 14.7716C0.878469 13.3042 0.363909 11.5812 0.363909 9.74207C0.364561 4.36169 4.75886 0 10.1823 0C15.605 0.00130433 20 4.36234 20 9.74272ZM10.1803 1.55346C5.62885 1.55346 1.9265 5.22777 1.9265 9.74468C1.9265 11.5368 2.51084 13.1959 3.49887 14.5459L2.46845 17.587L5.63929 16.5794C6.94362 17.435 8.50426 17.9333 10.1803 17.9333C14.7318 17.9333 18.4355 14.2596 18.4355 9.74272C18.4368 5.22777 14.7324 1.55346 10.1803 1.55346ZM15.1394 11.9868C15.0781 11.8883 14.9177 11.8283 14.6777 11.7084C14.4383 11.5884 13.2533 11.0112 13.0336 10.9329C12.8118 10.8527 12.6514 10.8123 12.491 11.0516C12.3325 11.291 11.8707 11.8284 11.7292 11.9888C11.589 12.1486 11.4488 12.1688 11.2081 12.0507C10.9675 11.9294 10.1914 11.679 9.27186 10.8658C8.55643 10.2318 8.07317 9.4512 7.93361 9.21186C7.79209 8.97316 7.91926 8.84403 8.03861 8.72534C8.14622 8.61773 8.27926 8.44621 8.39991 8.306C8.52056 8.16709 8.56034 8.06861 8.64056 7.90883C8.71947 7.74905 8.67969 7.61014 8.62034 7.48948C8.56034 7.36949 8.07969 6.19559 7.87818 5.71755C7.67796 5.24016 7.47775 5.31907 7.33688 5.31907C7.19666 5.31907 7.03623 5.29951 6.8758 5.29951C6.71536 5.29951 6.4545 5.35755 6.23472 5.5969C6.01494 5.83624 5.39277 6.41341 5.39277 7.58861C5.39277 8.76512 6.25428 9.89924 6.37493 10.0584C6.49623 10.2168 8.04056 12.7075 10.4868 13.6635C12.9344 14.619 12.9344 14.3001 13.3753 14.2596C13.8175 14.2192 14.7996 13.6825 14.9992 13.1255C15.2001 12.566 15.2001 12.0866 15.1394 11.9868Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_594_5123">
-                  <rect width="20" height="20" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+          <Button
+            onClick={() => navigate("/lomba", { preventScrollReset: true })}
+            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
+          >
+            <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
             Contact 2
           </Button>
 
           <div className="absolute -left-28 -bottom-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="1442"
+              width="1440"
               height="154"
               viewBox="0 0 1442 154"
               fill="none"
