@@ -4,8 +4,8 @@ export const navData = [
     name: "Beranda",
   },
   {
-    path: "lomba",
-    name: "Lomba",
+    path: "kegiatan",
+    name: "Kegiatan",
     child: [
       {
         name: "Kompetisi Debat Bahasa Indonesia (KDBI)",

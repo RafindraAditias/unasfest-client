@@ -11,16 +11,16 @@ export const routesConfig = createRoutesFromElements(
   <Route
     path="/"
     element={<Root />}
-    // errorElement={
-    //   <div className="w-full h-screen grid place-items-center">
-    //     <p>not found</p>
-    //   </div>
-    // }
+    errorElement={
+      <div className="w-full h-screen grid place-items-center">
+        <p>not found</p>
+      </div>
+    }
   >
     <Route index element={<Beranda />} />
 
     <Route
-      path="lomba/*"
+      path="kegiatan/*"
       element={<Lomba />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
@@ -61,7 +61,9 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="tentang"
-      element={<UnderConstruction />}
+      element={
+        <p className="w-full h-screen grid place-items-center">tentang page</p>
+      }
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Tentang</p>

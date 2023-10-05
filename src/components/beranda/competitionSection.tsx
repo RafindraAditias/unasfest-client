@@ -19,7 +19,7 @@ import Loading from "../loading";
 
 function CompetitionSection() {
   return (
-    <section id="lomba" className="relative w-full h-full mt-36 text-center">
+    <section id="kegiatan" className="relative w-full h-full mt-36 text-center">
       <Suspense fallback={<Loading />}>
         <div className="hidden w-3/5 m-auto mb-8 lg:block">
           <h1 className="text-5xl font-semibold tracking-normal capitalize mb-4">
