@@ -90,7 +90,7 @@ function Navbar() {
                       <NavigationMenu className="m-auto z-50">
                         <NavigationMenuItem
                           className={`${
-                            pathname === "/lomba" ? "nav-active" : "nav"
+                            pathname === "/kegiatan" ? "nav-active" : "nav"
                           }`}
                         >
                           <NavigationMenuTrigger>
@@ -102,7 +102,9 @@ function Navbar() {
                                 return (
                                   <NavigationMenuLink key={index}>
                                     <NavLink
-                                      to={generatePath(`/lomba?query=${query}`)}
+                                      to={generatePath(
+                                        `/kegiatan?query=${query}`
+                                      )}
                                       className="w-[300px] hover:bg-system-grey-600 hover:bg-opacity-10 block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                     >
                                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">

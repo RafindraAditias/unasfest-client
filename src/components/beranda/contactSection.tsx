@@ -34,7 +34,7 @@ function ContactSection() {
         </CardDescription>
         <CardContent className="relative flex justify-start gap-8 p-0">
           <Button
-            onClick={() => navigate("/lomba", { preventScrollReset: true })}
+            onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
             className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
           >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
@@ -42,7 +42,7 @@ function ContactSection() {
           </Button>
 
           <Button
-            onClick={() => navigate("/lomba", { preventScrollReset: true })}
+            onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
             className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
           >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
