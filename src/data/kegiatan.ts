@@ -1,7 +1,9 @@
+import kdbi from "@/assets/logo/logo_kdbi.webp";
 import galeriImage from "@/assets/content/asset.webp";
 
 export const kegiatanData = [
   {
+    logo: kdbi,
     image: galeriImage,
     title: "Kompetisi Debat Bahasa Indonesia",
     description:
