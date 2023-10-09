@@ -21,7 +21,7 @@ html {
 }
 
 .custom-card {
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 20px;
   background: linear-gradient(260deg, #7dc3f6 -52.33%, #005ad2 111.9%);
   color: white;
 }

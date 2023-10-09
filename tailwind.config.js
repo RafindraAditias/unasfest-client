@@ -38,6 +38,11 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
+        "text-color-1": "#0B090A",
+        "text-color-3": "#808080",
+        "text-color-4": "#AAA",
+        "text-primary": "#000",
+        "text-secondary": "rgba(60, 60, 67, 0.85)",
         "active-blue": "#004AAD",
         "primary-light": {
           a8: "#EFF3FD",
@@ -49,8 +54,6 @@ export default {
           700: "#616161",
           900: "#212121",
         },
-        "text-primary": "#000000",
-        "text-secondary": "rgba(60, 60, 67, 0.85)",
       },
 
       keyframes: {

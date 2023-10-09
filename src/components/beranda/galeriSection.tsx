@@ -4,7 +4,10 @@ import Loading from "../loading";
 
 function GaleriSection() {
   return (
-    <section id="galeri" className="w-full h-fit mt-48 m-auto">
+    <section
+      id="galeri"
+      className="w-full max-w-screen-xl mt-48 m-auto lg:w-4/5"
+    >
       <Suspense fallback={<Loading />}>
         <div className="flex w-full h-64 justify-center">
           <img

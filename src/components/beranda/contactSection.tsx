@@ -15,8 +15,8 @@ import mascotLogo from "@/assets/logo/maskot.webp";
 function ContactSection() {
   const navigate = useNavigate();
   return (
-    <section className="mt-20 lg:overflow-x-clip">
-      <Card className="custom-card overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
+    <section className="relative mt-20 lg:overflow-x-clip w-full max-w-screen-xl m-auto lg:w-4/5 lg:mt-40">
+      <Card className="custom-card w-[90%] m-auto overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:w-full lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
         <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl">
           Apakah Kami Dapat Membantu?
           <div className="absolute -top-28 right-0 z-10 hidden lg:inline-block">

@@ -9,7 +9,10 @@ import Loading from "../loading";
 
 function AboutSection() {
   return (
-    <section id="beranda" className="w-full h-fit mt-10 lg:mt-32 xl:mt-48">
+    <section
+      id="beranda"
+      className="w-full max-w-screen-xl m-auto mt-10 lg:mt-32 xl:mt-48 lg:w-4/5"
+    >
       <Suspense fallback={<Loading />}>
         <div className="relative w-4/5 max-w[1440px] m-auto flex flex-col items-center gap-16 lg:w-full lg:flex-row lg:items-start lg:gap-10">
           <div className="w-full basis-4/6">
