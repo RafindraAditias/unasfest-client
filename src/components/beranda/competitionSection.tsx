@@ -19,7 +19,10 @@ import Loading from "../loading";
 
 function CompetitionSection() {
   return (
-    <section id="kegiatan" className="relative w-full h-full mt-36 text-center">
+    <section
+      id="kegiatan"
+      className="relative w-full max-w-screen-xl m-auto mt-36 text-center lg:w-4/5"
+    >
       <Suspense fallback={<Loading />}>
         <div className="hidden w-3/5 m-auto mb-8 lg:block">
           <h1 className="text-5xl font-semibold tracking-normal capitalize mb-4">
@@ -43,7 +46,7 @@ function CompetitionSection() {
           />
         </div>
 
-        <Card className="w-[90%] m-auto py-14 p-8 rounded-[20px] border border-active-blue lg:w-full lg:rounded-[50px] lg:border-none lg:py-24">
+        <Card className="w-[90%] m-auto py-14 p-8 border border-active-blue lg:w-full lg:rounded-[50px] lg:border-none lg:py-24">
           <CardHeader className="p-0 pb-12">
             <CardTitle className="text-black text-[32px] font-semibold tracking-tight text-pretty leading-normal mb-4 lg:hidden">
               universitas Nasional Festival 2023

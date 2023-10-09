@@ -4,24 +4,24 @@ import { Route, createRoutesFromElements } from "react-router-dom";
 
 const Root = lazy(() => import("@/routes/root"));
 const Beranda = lazy(() => import("@/routes/beranda"));
-const Lomba = lazy(() => import("@/routes/lomba"));
+const Kegiatan = lazy(() => import("@/routes/kegiatan"));
 const UnderConstruction = lazy(() => import("@/routes/underConstruction"));
 
 export const routesConfig = createRoutesFromElements(
   <Route
     path="/"
     element={<Root />}
-    errorElement={
-      <div className="w-full h-screen grid place-items-center">
-        <p>not found</p>
-      </div>
-    }
+    // errorElement={
+    //   <div className="w-full h-screen grid place-items-center">
+    //     <p>not found</p>
+    //   </div>
+    // }
   >
     <Route index element={<Beranda />} />
 
     <Route
       path="kegiatan/*"
-      element={<Lomba />}
+      element={<Kegiatan />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di lomba</p>
@@ -61,9 +61,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="tentang"
-      element={
-        <p className="w-full h-screen grid place-items-center">tentang page</p>
-      }
+      element={<UnderConstruction />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Tentang</p>
