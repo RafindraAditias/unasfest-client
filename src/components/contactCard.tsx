@@ -8,32 +8,34 @@ import {
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
-import mascotLogo from "@/assets/logo/maskot.webp";
+import contactImage from "@/assets/icons/come_to_join.webp";
+import Blur from "./ui/blur";
 
-function ContactSection() {
+function ContactCard() {
   const navigate = useNavigate();
   return (
-    <section className="relative mt-20 lg:overflow-x-clip w-full max-w-screen-xl m-auto lg:w-4/5 lg:mt-40">
-      <Card className="custom-card w-[90%] m-auto overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:w-full lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
-        <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl">
+    <section className="relative my-20 lg:my-40 w-full max-w-screen-xl lg:w-[90%] m-auto lg:mt-40">
+      <Card className="custom-card w-[90%] m-auto overflow-hidden text-start py-16 lg:w-full lg:rounded-t-[30px] lg:rounded-b-none">
+        <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl px-6 lg:px-28">
           Apakah Kami Dapat Membantu?
-          <div className="absolute -top-28 right-0 z-10 hidden lg:inline-block">
+          <div className="absolute bottom-1/2 right-20 translate-y-1/2 z-10 hidden lg:inline-block">
             <img
-              src={mascotLogo}
+              src={contactImage}
               alt="maskot unasfest"
-              width={408}
-              height={408}
-              className="max-w-[408px] w-full"
+              width={344}
+              height={344}
+              className="max-w-[300px] w-full"
             />
           </div>
         </CardTitle>
-        <CardDescription className="w-full text-white font-inter text-base leading-normal tracking-wide font-normal mb-5 lg:mb-20 md:text-2xl lg:w-8/12">
+        <CardDescription className="relative z-10 w-full text-white font-inter text-base leading-normal tracking-wide font-normal mb-5 px-6 lg:px-28 lg:mb-20 md:text-2xl lg:w-8/12">
           Ada masalah? Yuk hubungi contact person kami!
         </CardDescription>
-        <CardContent className="relative flex justify-start gap-8 p-0">
+        <CardContent className="relative flex justify-start gap-8 p-0 px-6 lg:px-28">
           <Button
             onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
-            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
+            size="icon"
+            className="w-44 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-xs font-bold lg:text-base"
           >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
             Contact 1
@@ -41,13 +43,14 @@ function ContactSection() {
 
           <Button
             onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
-            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
+            size="icon"
+            className="w-44 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-xs font-bold lg:text-base"
           >
-            <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
+            <img src={whatsappIcon} alt="whatsapp" width={20} />
             Contact 2
           </Button>
 
-          <div className="absolute -left-28 -bottom-16">
+          <div className="absolute -left-0 -bottom-16 w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1440"
@@ -62,7 +65,7 @@ function ContactSection() {
               />
             </svg>
           </div>
-          <div className="absolute -left-28 -bottom-16">
+          <div className="absolute -left-0 -bottom-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1440"
@@ -79,8 +82,9 @@ function ContactSection() {
           </div>
         </CardContent>
       </Card>
+      <Blur className="w-[470px] h-[480px] top-80 -right-10 bg-[#6CC8FC]" />
     </section>
   );
 }
 
-export default ContactSection;
+export default ContactCard;

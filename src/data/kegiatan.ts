@@ -1,5 +1,9 @@
 import kdbi from "@/assets/logo/logo_kdbi.webp";
+import edc from "@/assets/logo/logo_edc.webp";
+import lkti from "@/assets/logo/logo_lkti.webp";
 import galeriImage from "@/assets/content/asset.webp";
+import qorinaJudge from "@/assets/content/judge-qorina.webp";
+import { kdbiTimelineData } from "./kdbiTimeline";
 
 export const kegiatanData = [
   {
@@ -20,6 +24,7 @@ export const kegiatanData = [
     judgeData: [
       {
         name: "Qorina Salmaneta Setya Wulandari",
+        image: qorinaJudge,
         description:
           "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
         achievements: [
@@ -30,14 +35,102 @@ export const kegiatanData = [
         ],
       },
     ],
-    timeline: [
+    timeline: kdbiTimelineData,
+  },
+
+  {
+    logo: edc,
+    image: galeriImage,
+    title: "English Debate Competition",
+    description:
+      "The English Debate Competition (EDC) is an English language debate competition where participants debate arguments and thoughts related to contemporary issues from various aspects, namely social, political, cultural, technological, economic, energy, legal, health and so on. Therefore, the English Debate Competition (EDC) aims to improve participants' ability to speak in public, develop analytical and critical thinking skills, and strengthen their ability to argue using effective and persuasive language. The English Debate Competition (EDC) will be held with the theme 'Implementation of Technology in Blue Econo...",
+    termsAndConditions: [
+      "Participants are active D3/D4/S1 students registered in PD-Dikti (Pangkalan Data Pendidikan Tinggi) from any faculty in PTN or PTS,",
+      "Participants have registered themselves on the registration link that has been listed on UNAS-FEST 2023 website",
+      "Participants must join the WhatsApp group,",
+      "Participants are students who have never had a Bachelor's degree (S1) / Applied Bachelor's degree (D4),",
+      "Participants are a team consisting of 2 students from the same university and N1,",
+      "Participants that have already paid the registration fee and afterward cancel their participation, the fee is non-refundable,",
+      "All EDC participants are required to attend the UNAS FEST 2023 National Seminar.",
+    ],
+    judgeData: [
       {
-        title: "Pendaftaran",
+        name: "Qorina Salmaneta Setya Wulandari",
+        image: qorinaJudge,
         description:
-          "Mengisi google form yang sudah disediakan untuk melakukan pendaftaran",
-        from: "1",
-        to: "4 November 2023",
+          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+        achievements: [
+          "Novice Champion of National University Debating Championship (NUDC) 2022.",
+          "President of BEM KM FOB Sampoerna University",
+          "1st place in Wonogiri Regency 2019 NSDC.",
+          "1st runner-up in Region VI NSDC Central Java.",
+        ],
       },
     ],
+    timeline: kdbiTimelineData,
+  },
+
+  {
+    logo: lkti,
+    image: galeriImage,
+    title: "Karya Tulis Ilmiah",
+    description:
+      "Lomba Karya Tulis Ilmiah UNAS FEST 2023 adalah salah satu dari tiga acara UNAS FEST 2023 yang berupa kompetisi Karya Tulis ilmiah Tingkat Nasional antar PTN & PTS se-Indonesia. Lomba Karya Tulis Ilmiah adalah kompetisi karya tulis yang diperoleh dari hasil observasi dan penelitian dalam bidang dan metode tertentu, dengan penulisan sistematis dan menggunakan bahasa Indonesia yang baik dan benar serta isinya dapat dipertanggungjawabkan kebenarannya/keilmiahannya.",
+    termsAndConditions: [
+      "Mahasiswa/i aktif yang terdaftar pada PDDIKTI (Pangkalan Data Pendidikan Tinggi),",
+      "Mahasiswa/i yang berasal dari berbagai Program Studi dan Perguruan Tinggi Negeri maupun Swasta di Indonesia,",
+      "Mahasiswa/i memenuhi persyaratan administrasi yang telah ditetapkan oleh panitia penyelenggara kegiatan,",
+      "Mahasiswa/i mematuhi peraturan yang telah ditentukan dan tercantum pada buku pedoman LKTI UNAS FEST 2023,",
+      "Seluruh peserta LKTI wajib mengikuti Seminar Nasional UNAS FEST 2023,",
+      "Peserta LKTI UNAS FEST 2023 bersifat individu,",
+    ],
+    judgeData: [
+      {
+        name: "Qorina Salmaneta Setya Wulandari",
+        image: qorinaJudge,
+        description:
+          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+        achievements: [
+          "Novice Champion of National University Debating Championship (NUDC) 2022.",
+          "President of BEM KM FOB Sampoerna University",
+          "1st place in Wonogiri Regency 2019 NSDC.",
+          "1st runner-up in Region VI NSDC Central Java.",
+        ],
+      },
+    ],
+    timeline: kdbiTimelineData,
+  },
+
+  {
+    logo: lkti,
+    image: galeriImage,
+    title: "Seminar Nasional",
+    description:
+      "Seminar merupakan pertemuan kelompok yang membahas dan menemukan solusi dari topik atau masalah yang relevan dengan mempresentasikan dan menjelaskan solusi tersebut yang dilakukan oleh individu yang ahli di bidangnya. Hal yang menjadi topik pembahasan kita saat ini dimana kita akan membahas terkait bagaimana ‘penerapan teknologi di dalam inovasi maritim yang beracuan pada ekonomi biru yang mentransformasikan sistem ekonomi secara menyeluruh’.  Hadirnya penyelenggaraan Seminar Nasional UNAS FEST 2023 yang diselenggarakan oleh Biro Kemahasiswaan dalam merayakan ula...",
+    termsAndConditions: [
+      "Untuk mengembangkan wawasan serta meningkatkan pemikiran kritis mahasiswa/i Indonesia,",
+      "Meningkatkan semangat jiwa ilmiah dan mengingkatkan rasa banga dan cinta tanah air kepada mahasiswa/i Indonesia,",
+      "Mensosialisasikan kepada mahasiswa/i Universitas Nasional mengenai maritim di Indonesia,",
+      "Meningkatkan motivasi dan menambah ilmu para mahasiswa/i terkait kelautan.",
+    ],
+    seminar: {
+      title: "Tema Seminar Nasional",
+      tema: "“Implementasi Teknologi Dalam Kebijakan Ekonomi Biru Untuk Mengoptimalkan Inovasi Maritim Yang Berkelanjutan Di Indonesia”",
+    },
+    judgeData: [
+      {
+        name: "Qorina Salmaneta Setya Wulandari",
+        image: qorinaJudge,
+        description:
+          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+        achievements: [
+          "Novice Champion of National University Debating Championship (NUDC) 2022.",
+          "President of BEM KM FOB Sampoerna University",
+          "1st place in Wonogiri Regency 2019 NSDC.",
+          "1st runner-up in Region VI NSDC Central Java.",
+        ],
+      },
+    ],
+    timeline: kdbiTimelineData,
   },
 ];

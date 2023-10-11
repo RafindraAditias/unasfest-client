@@ -1,4 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
+import Tentang from "@/routes/tentang";
 import { lazy } from "react";
 import { Route, createRoutesFromElements } from "react-router-dom";
 
@@ -22,11 +23,11 @@ export const routesConfig = createRoutesFromElements(
     <Route
       path="kegiatan/*"
       element={<Kegiatan />}
-      errorElement={
-        <div className="w-full h-screen grid place-items-center">
-          <p>error di lomba</p>
-        </div>
-      }
+      // errorElement={
+      //   <div className="w-full h-screen grid place-items-center">
+      //     <p>error di lomba</p>
+      //   </div>
+      // }
     />
 
     <Route
@@ -61,7 +62,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="tentang"
-      element={<UnderConstruction />}
+      element={<Tentang />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Tentang</p>
