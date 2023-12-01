@@ -18,8 +18,8 @@ const TimelineCarousel = () => {
       {aboutTimelineData.map((timeline, index) => {
         return (
           <SwiperSlide
-            id="slides"
             key={index}
+            id="slides"
             style={{
               width: "347px",
               height: "135px",

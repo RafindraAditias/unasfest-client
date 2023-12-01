@@ -4,6 +4,7 @@ import { kegiatanData } from "@/data/kegiatan";
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
 import Blur from "../ui/blur";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   data: (typeof kegiatanData)[0];
@@ -18,7 +19,10 @@ function HeroSection({ data }: Props) {
     termsAndConditions,
     judgeData,
     seminar,
+    formPath,
   } = data;
+
+  const navigate = useNavigate();
   return (
     <section className="w-[90%] max-w-screen-xl m-auto mt-10">
       <div>
@@ -27,6 +31,7 @@ function HeroSection({ data }: Props) {
             <Button
               variant="outline"
               className="gap-2 pl-2 border-2 border-black rounded-[30px] text-xs font-semibold leading-normal text-[#2F2F30] lg:text-base"
+              onClick={() => navigate("/")}
             >
               <ChevronLeft />
               kembali
@@ -56,7 +61,10 @@ function HeroSection({ data }: Props) {
               <h1 className="text-2xl leading-normal font-bold text-[#000] lg:text-5xl">
                 {title}
               </h1>
-              <Button className="bg-active-blue text-base font-semibold rounded-[30px] lg:text-xl lg:py-6 lg:px-6 leading-normal">
+              <Button
+                className="bg-active-blue text-base font-semibold rounded-[30px] lg:text-xl lg:py-6 lg:px-6 leading-normal"
+                onClick={() => navigate(`/kegiatan/form/${formPath}`)}
+              >
                 Daftar Sekarang
               </Button>
             </div>
@@ -82,7 +90,7 @@ function HeroSection({ data }: Props) {
           <Blur className="w-[470px] h-[480px] -top-56 left-96 bg-[#6CC8FC] blur-[300px]" />
           <CardContent className="py-[30px] px-[15px] flex flex-col gap-[14px]">
             <h1 className="text-2xl font-bold leading-normal text-[#000] lg:text-[32px] lg:font-semibold">
-              Syarat dan Ketentuan
+              {seminar ? "Tujuan" : "Syarat dan Ketentuan"}
             </h1>
 
             <ol

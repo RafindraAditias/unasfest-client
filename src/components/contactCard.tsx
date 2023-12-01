@@ -16,7 +16,7 @@ function ContactCard() {
   return (
     <section className="relative my-20 lg:my-40 w-full max-w-screen-xl lg:w-[90%] m-auto lg:mt-40">
       <Card className="custom-card w-[90%] m-auto overflow-hidden text-start py-16 lg:w-full lg:rounded-t-[30px] lg:rounded-b-none">
-        <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl px-6 lg:px-28">
+        <CardTitle className="w-full lg:w-9/12 text-xl mb-3 font-semibold !leading-tight tracking-wide md:text-2xl lg:text-5xl px-6 lg:px-28">
           Apakah Kami Dapat Membantu?
           <div className="absolute bottom-1/2 right-20 translate-y-1/2 z-10 hidden lg:inline-block">
             <img
@@ -28,7 +28,7 @@ function ContactCard() {
             />
           </div>
         </CardTitle>
-        <CardDescription className="relative z-10 w-full text-white font-inter text-base leading-normal tracking-wide font-normal mb-5 px-6 lg:px-28 lg:mb-20 md:text-2xl lg:w-8/12">
+        <CardDescription className="relative z-10 w-full text-white font-inter text-base leading-normal tracking-wide font-normal mb-5 px-6 lg:px-28 lg:mb-20 md:text-lg lg:text-2xl lg:w-8/12">
           Ada masalah? Yuk hubungi contact person kami!
         </CardDescription>
         <CardContent className="relative flex justify-start gap-8 p-0 px-6 lg:px-28">

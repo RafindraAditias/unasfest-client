@@ -1,11 +1,12 @@
-import aboutImage from "@/assets/content/about.webp";
-import fragment2 from "@/assets/fragments/fragment2.webp";
-import fragment3 from "@/assets/fragments/fragment3.webp";
-import fragment4 from "@/assets/fragments/fragment4.webp";
+import juaraLomba from "@/assets/gallery/juara_lomba.webp";
+import fragment2 from "@/assets/random/fragment2.webp";
+import fragment3 from "@/assets/random/fragment3.webp";
+import fragment4 from "@/assets/random/fragment4.webp";
 import { Button } from "../ui/button";
 import Blur from "../ui/blur";
 import { Suspense } from "react";
 import Loading from "../loading";
+import { Link } from "react-scroll";
 
 function AboutSection() {
   return (
@@ -14,7 +15,7 @@ function AboutSection() {
       className="w-full max-w-screen-xl m-auto mt-10 lg:mt-32 xl:mt-48 lg:w-4/5"
     >
       <Suspense fallback={<Loading />}>
-        <div className="relative w-4/5 max-w[1440px] m-auto flex flex-col items-center gap-16 lg:w-full lg:flex-row lg:items-start lg:gap-10">
+        <div className="relative w-4/5 max-w-screen-xl m-auto flex flex-col items-center gap-16 lg:w-full lg:flex-row lg:items-start lg:gap-10">
           <div className="w-full basis-4/6">
             <h2 className="text-2xl leading-normal font-bold text-active-blue mb-3">
               Universitas Nasional
@@ -27,8 +28,15 @@ function AboutSection() {
               tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
               veniam, quis nostrum exercitationem ullam corporis suscpit
             </p>
-            <Button className="hidden lg:flex mt-36 w-72 bg-active-blue rounded-[40px] py-8 text-2xl">
-              Daftar Perlombaan
+            <Button className="hidden lg:flex mt-36 w-72 bg-active-blue rounded-[40px] py-8 text-2xl px-0">
+              <Link
+                to="kegiatan"
+                smooth={false}
+                offset={-100}
+                className="w-full py-5"
+              >
+                Daftar Perlombaan
+              </Link>
             </Button>
           </div>
 
@@ -36,7 +44,7 @@ function AboutSection() {
             <div className="w-full lg:w-[480px] h-fit aspect-[163/112] overflow-hidden rounded-xl">
               <div className="absolute w-full h-full border-dashed border-[4px] border-[#E79FE1] top-3 right-3"></div>
               <img
-                src={aboutImage}
+                src={juaraLomba}
                 alt="about"
                 width={250}
                 height={170}

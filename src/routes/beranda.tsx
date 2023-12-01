@@ -6,7 +6,6 @@ import Faq from "@/components/beranda/faq";
 import Footer from "@/components/beranda/footer";
 import GaleriSection from "@/components/beranda/galeriSection";
 import TimelineSection from "@/components/beranda/timelineSection";
-import { ScrollRestoration } from "react-router-dom";
 
 export default function Beranda() {
   return (
@@ -19,8 +18,6 @@ export default function Beranda() {
       <ContactSection />
       <Faq />
       <Footer />
-
-      <ScrollRestoration />
     </main>
   );
 }

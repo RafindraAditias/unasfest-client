@@ -1,14 +1,15 @@
-import kdbi from "@/assets/logo/logo_kdbi.webp";
-import edc from "@/assets/logo/logo_edc.webp";
-import lkti from "@/assets/logo/logo_lkti.webp";
-import galeriImage from "@/assets/content/asset.webp";
-import qorinaJudge from "@/assets/content/judge-qorina.webp";
+import kdbiLogo from "@/assets/logo/logo-kdbi.webp";
+import edcLogo from "@/assets/logo/logo-edc.webp";
+import lktiLogo from "@/assets/logo/logo-lkti.webp";
+import semnasLogo from "@/assets/logo/logo-semnas.webp";
+import juriLomba from "@/assets/gallery/juri_lomba.webp";
+import qorinaJudge from "@/assets/gallery/juri_qorina.webp";
 import { kdbiTimelineData } from "./kdbiTimeline";
 
 export const kegiatanData = [
   {
-    logo: kdbi,
-    image: galeriImage,
+    logo: kdbiLogo,
+    image: juriLomba,
     title: "Kompetisi Debat Bahasa Indonesia",
     description:
       "Kegiatan Kompetisi Debat Bahasa Indonesia (KDBI) merupakan kompetisi debat berbahasa Indonesia dimana peserta beradu argumen dan pemikiran terkait isu-isu kontemporer dari berbagai aspek yakni sosial, politik, budaya, teknologi, ekonomi, energi, hukum, kesehatan dan lain sebagainya. Oleh karena itu, Kompetisi Debat Bahasa Indonesia (KDBI) bertujuan untuk meningkatkan kemampuan peserta dalam berbicara di depan umum, mengembangkan kemampuan analisis dan berpikir kritis, serta memperkuat keterampilan berargumentasi dengan menggunakan bahasa yang efektif dan persuasif. Kompetisi Debat Bahasa Indonesia (KDBI) akan bertemakan tentang “Implementasi Teknologi dalam Kebijakan Ekonomi Biru untuk...",
@@ -36,11 +37,12 @@ export const kegiatanData = [
       },
     ],
     timeline: kdbiTimelineData,
+    formPath: "kdbi",
   },
 
   {
-    logo: edc,
-    image: galeriImage,
+    logo: edcLogo,
+    image: juriLomba,
     title: "English Debate Competition",
     description:
       "The English Debate Competition (EDC) is an English language debate competition where participants debate arguments and thoughts related to contemporary issues from various aspects, namely social, political, cultural, technological, economic, energy, legal, health and so on. Therefore, the English Debate Competition (EDC) aims to improve participants' ability to speak in public, develop analytical and critical thinking skills, and strengthen their ability to argue using effective and persuasive language. The English Debate Competition (EDC) will be held with the theme 'Implementation of Technology in Blue Econo...",
@@ -68,11 +70,12 @@ export const kegiatanData = [
       },
     ],
     timeline: kdbiTimelineData,
+    formPath: "edc",
   },
 
   {
-    logo: lkti,
-    image: galeriImage,
+    logo: lktiLogo,
+    image: juriLomba,
     title: "Karya Tulis Ilmiah",
     description:
       "Lomba Karya Tulis Ilmiah UNAS FEST 2023 adalah salah satu dari tiga acara UNAS FEST 2023 yang berupa kompetisi Karya Tulis ilmiah Tingkat Nasional antar PTN & PTS se-Indonesia. Lomba Karya Tulis Ilmiah adalah kompetisi karya tulis yang diperoleh dari hasil observasi dan penelitian dalam bidang dan metode tertentu, dengan penulisan sistematis dan menggunakan bahasa Indonesia yang baik dan benar serta isinya dapat dipertanggungjawabkan kebenarannya/keilmiahannya.",
@@ -99,11 +102,12 @@ export const kegiatanData = [
       },
     ],
     timeline: kdbiTimelineData,
+    formPath: "lkti",
   },
 
   {
-    logo: lkti,
-    image: galeriImage,
+    logo: semnasLogo,
+    image: juriLomba,
     title: "Seminar Nasional",
     description:
       "Seminar merupakan pertemuan kelompok yang membahas dan menemukan solusi dari topik atau masalah yang relevan dengan mempresentasikan dan menjelaskan solusi tersebut yang dilakukan oleh individu yang ahli di bidangnya. Hal yang menjadi topik pembahasan kita saat ini dimana kita akan membahas terkait bagaimana ‘penerapan teknologi di dalam inovasi maritim yang beracuan pada ekonomi biru yang mentransformasikan sistem ekonomi secara menyeluruh’.  Hadirnya penyelenggaraan Seminar Nasional UNAS FEST 2023 yang diselenggarakan oleh Biro Kemahasiswaan dalam merayakan ula...",
@@ -132,5 +136,6 @@ export const kegiatanData = [
       },
     ],
     timeline: kdbiTimelineData,
+    formPath: "semnas",
   },
 ];

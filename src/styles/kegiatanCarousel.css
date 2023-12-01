@@ -1,0 +1,38 @@
+.galeri-kegiatan .swiper-button-next::after,
+.galeri-kegiatan .swiper-button-prev::after {
+  content: "";
+  display: none;
+  z-index: 9999;
+}
+
+.galeri-kegiatan .swiper-button-prev {
+  background-image: url("secondary_left_arrow.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 50%;
+  max-height: 13%;
+  top: var(--swiper-navigation-top-offset, 50%);
+}
+
+.galeri-kegiatan .swiper-button-next {
+  background-image: url("secondary_right_arrow.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 50%;
+  max-height: 13%;
+  top: var(--swiper-navigation-top-offset, 50%);
+}
+
+.galeri-kegiatan .swiper-button-prev,
+.galeri-kegiatan .swiper-rtl {
+  left: var(--swiper-navigation-sides-offset, 1rem);
+  width: calc(1rem + 5%);
+  right: auto;
+}
+
+.galeri-kegiatan .swiper-button-next,
+.galeri-kegiatan .swiper-rtl {
+  right: var(--swiper-navigation-sides-offset, 1rem);
+  width: calc(1rem + 5%);
+  left: auto;
+}

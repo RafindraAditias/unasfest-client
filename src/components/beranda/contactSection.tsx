@@ -1,3 +1,5 @@
+import whatsappIcon from "@/assets/icons/whatsapp.svg";
+import maskotUnasfest from "@/assets/icons/maskot.webp";
 import {
   Card,
   CardTitle,
@@ -7,8 +9,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import whatsappIcon from "@/assets/icons/whatsapp.svg";
-import mascotLogo from "@/assets/logo/maskot.webp";
+import axios from "axios";
 
 function ContactSection() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function ContactSection() {
           Apakah Kami Dapat Membantu?
           <div className="absolute -top-28 right-0 z-10 hidden lg:inline-block">
             <img
-              src={mascotLogo}
+              src={maskotUnasfest}
               alt="maskot unasfest"
               width={408}
               height={408}
@@ -32,7 +33,11 @@ function ContactSection() {
         </CardDescription>
         <CardContent className="relative flex justify-start gap-8 p-0">
           <Button
-            onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
+            onClick={() => {
+              axios
+                .get("http://localhost:8000/")
+                .then((response) => console.log(response));
+            }}
             className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
           >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />

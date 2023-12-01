@@ -43,7 +43,7 @@ function AboutCarousel(props: IProps) {
           <img
             src={image}
             alt="carousel"
-            className="object-cover w-10 rounded-2xl opacity-50"
+            className="object-cover w-full rounded-2xl opacity-50"
             width={597}
             height={521}
             loading="eager"

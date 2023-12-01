@@ -26,7 +26,7 @@ const BenefitCarousel = () => {
       pagination={{
         clickable: true,
       }}
-      className="mySwiper"
+      className="w-full h-full mx-auto"
     >
       {benefitData.map((content) => (
         <SwiperSlide key={content.title}>

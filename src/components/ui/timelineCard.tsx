@@ -17,7 +17,7 @@ interface Props extends timelineCarouselProps {
 
 function TimelineCard({ title, description, timelines, children }: Props) {
   return (
-    <section className="relative mt-20 w-full max-w-screen-xl m-auto lg:w-4/5">
+    <section className="relative mt-20 w-full max-w-screen-xl m-auto lg:w-[90%]">
       <Card className="pt-12 pb-2 text-center overflow-hidden rounded-none lg:rounded-[50px] lg:border-none">
         <CardTitle className="text-4xl tracking-wide font-semibold leading-normal lg:text-5xl">
           {title}

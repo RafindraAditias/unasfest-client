@@ -1,5 +1,5 @@
-import graphicLogo from "@/assets/logo/graphic-logo.png";
-import unasLogo from "@/assets/logo/logo-unasfest.png";
+import graphicLogo from "@/assets/logo/graphic-logo-unasfest.webp";
+import unasfestLogo from "@/assets/logo/logo-unasfest.webp";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Phone, Mail } from "lucide-react";
 
@@ -7,11 +7,17 @@ function Footer() {
   return (
     <section>
       <Card className="bg-white rounded-none lg:py-20 pt-16">
-        <CardContent className="!w-[80%] max-w-screen-xl p-3 m-auto text-center text-[#33333399] flex flex-nowrap gap-11 flex-col lg:w-full lg:flex-row lg:text-start lg:gap-10">
+        <CardContent className="font-roboto !w-[80%] max-w-screen-xl p-3 m-auto text-center text-[#33333399] flex flex-nowrap gap-11 flex-col lg:w-full lg:flex-row lg:text-start lg:gap-10">
           <div className="lg:w-[30%] lg:flex lg:flex-col lg:gap-6">
             <div className="flex gap-3 justify-center lg:justify-start items-center">
-              <img src={graphicLogo} alt="logo unas" width={57} height={57} />
-              <img src={unasLogo} alt="logo unas" width={130} height={55} />
+              <img src={graphicLogo} alt="logo unas" width={60} height={60} />
+              <img
+                src={unasfestLogo}
+                alt="logo unas"
+                width={130}
+                height={60}
+                className="w-[130px] h-[60px] object-cover"
+              />
             </div>
             <h1 className="hidden text-xl text-[#333] lg:inline-block">
               Suara dan Pikiran Merajut Irama Kompetitif di UNAS Fest 2023
@@ -21,19 +27,19 @@ function Footer() {
               <img
                 src="instagram.png"
                 alt="instagram account"
-                width={29}
+                width={30}
                 className="aspect-square max-h-[30px]"
               />
               <img
                 src="youtube.png"
                 alt="youtube channel"
-                width={43}
-                className="aspect-square max-h-[30px]"
+                width={40}
+                className="aspect-auto max-h-[30px]"
               />
               <img
                 src="tiktok.png"
                 alt="tiktok"
-                width={26}
+                width={30}
                 className="aspect-square max-h-[30px]"
               />
             </div>
@@ -97,19 +103,19 @@ function Footer() {
                 <img
                   src="instagram.png"
                   alt="instagram account"
-                  width={29}
+                  width={30}
                   className="aspect-square max-h-[30px]"
                 />
                 <img
                   src="youtube.png"
                   alt="youtube channel"
-                  width={43}
+                  width={40}
                   className="aspect-square max-h-[30px]"
                 />
                 <img
                   src="tiktok.png"
                   alt="tiktok"
-                  width={26}
+                  width={30}
                   className="aspect-square max-h-[30px]"
                 />
               </div>

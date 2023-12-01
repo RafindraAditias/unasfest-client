@@ -1,5 +1,5 @@
-import graphicLogo from "@/assets/logo/graphic-logo.png";
-import unasLogo from "@/assets/logo/logo-unasfest.png";
+import graphicLogo from "@/assets/logo/graphic-logo-unasfest.webp";
+import unasfestLogo from "@/assets/logo/logo-unasfest.webp";
 import { useEffect, useState } from "react";
 import { NavLink, generatePath } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -49,20 +49,20 @@ function Navbar() {
             <img
               src={graphicLogo}
               alt="logo unas graphic"
-              className="w-[57px] object-contain hidden md:block"
-              width={57}
-              height={57}
+              className="w-[60px] aspect-square hidden md:block"
+              width={60}
+              height={60}
             />
             <img
-              src={unasLogo}
+              src={unasfestLogo}
               alt="logo unas fest"
-              className="w-[130px] object-contain"
+              className="w-[130px] h-[60px] object-cover"
               width={130}
-              height={55}
+              height={60}
             />
           </div>
 
-          <div className="text-xl font-bold tracking-wide">
+          <div className="text-base font-bold tracking-wide xl:text-xl">
             <div
               className="lg:hidden"
               onClick={() => setMenuOpen((prev) => !prev)}
@@ -81,7 +81,7 @@ function Navbar() {
             <ul
               className={`w-full flex flex-col absolute -z-50 ${
                 menuOpen ? "top-24" : "-top-96"
-              } py-6 left-0 text-center gap-6 bg-white duration-200 lg:flex-row lg:z-0 lg:bg-transparent lg:w-fit lg:static lg:gap-16`}
+              } py-6 left-0 text-center gap-6 bg-white duration-200 lg:flex-row lg:z-0 lg:bg-transparent lg:w-fit lg:static lg:gap-12 xl:gap-16`}
             >
               {navData.map(({ path, name, child }, index) => {
                 return (
@@ -90,11 +90,15 @@ function Navbar() {
                       <NavigationMenu className="m-auto z-50">
                         <NavigationMenuItem
                           className={`${
-                            pathname === "/kegiatan" ? "nav-active" : "nav"
+                            pathname.includes("/kegiatan")
+                              ? "nav-active"
+                              : "nav"
                           }`}
                         >
                           <NavigationMenuTrigger>
-                            <NavigationMenuLink>{name}</NavigationMenuLink>
+                            <NavigationMenuLink className="text-base xl:text-xl">
+                              {name}
+                            </NavigationMenuLink>
                           </NavigationMenuTrigger>
                           <NavigationMenuContent>
                             <NavigationMenuList className="flex-col">
@@ -102,6 +106,7 @@ function Navbar() {
                                 return (
                                   <NavigationMenuLink key={index}>
                                     <NavLink
+                                      onClick={() => setMenuOpen(false)}
                                       to={generatePath(
                                         `/kegiatan?query=${query}`
                                       )}
@@ -124,6 +129,7 @@ function Navbar() {
                         className={({ isActive }) =>
                           isActive ? "nav-active" : "nav"
                         }
+                        onClick={() => setMenuOpen(false)}
                       >
                         {name}
                       </NavLink>
