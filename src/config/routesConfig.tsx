@@ -1,23 +1,21 @@
 /* eslint-disable react-refresh/only-export-components */
+import ErrorBoundary from "@/components/errorBoundary";
+import NotFound from "@/components/notFound";
+import DaftarLomba from "@/routes/daftarLomba";
+import Tentang from "@/routes/tentang";
 import { lazy } from "react";
-import { Route, createRoutesFromElements } from "react-router-dom";
+import { Route, createRoutesFromElements, json } from "react-router-dom";
 
 const Root = lazy(() => import("@/routes/root"));
 const Beranda = lazy(() => import("@/routes/beranda"));
 const Kegiatan = lazy(() => import("@/routes/kegiatan"));
+const Galeri = lazy(() => import("@/routes/galeri"));
 const UnderConstruction = lazy(() => import("@/routes/underConstruction"));
 
 export const routesConfig = createRoutesFromElements(
-  <Route
-    path="/"
-    element={<Root />}
-    // errorElement={
-    //   <div className="w-full h-screen grid place-items-center">
-    //     <p>not found</p>
-    //   </div>
-    // }
-  >
+  <Route path="/" element={<Root />} errorElement={<ErrorBoundary />}>
     <Route index element={<Beranda />} />
+    <Route path="*" element={<NotFound />} />
 
     <Route
       path="kegiatan/*"
@@ -31,7 +29,7 @@ export const routesConfig = createRoutesFromElements(
 
     <Route
       path="galeri"
-      element={<UnderConstruction />}
+      element={<Galeri />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di galeri</p>
@@ -50,8 +48,8 @@ export const routesConfig = createRoutesFromElements(
     />
 
     <Route
-      path="ranking"
-      element={<UnderConstruction />}
+      path="tentang"
+      element={<Tentang />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Ranking</p>
@@ -60,13 +58,11 @@ export const routesConfig = createRoutesFromElements(
     />
 
     <Route
-      path="tentang"
-      element={<UnderConstruction />}
-      errorElement={
-        <div className="w-full h-screen grid place-items-center">
-          <p>error di Tentang</p>
-        </div>
-      }
+      path="kegiatan/form/:id"
+      loader={({ params }) => {
+        return json({ url: params.id });
+      }}
+      element={<DaftarLomba />}
     />
   </Route>
 );

@@ -4,7 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "styles/timelineCarousel.css";
-import { timelineData } from "@/data/timeline";
+import { aboutTimelineData } from "@/data/aboutTimeline";
 
 const TimelineCarousel = () => {
   return (
@@ -15,11 +15,11 @@ const TimelineCarousel = () => {
       modules={[Pagination]}
       className="mySwiper"
     >
-      {timelineData.map((timeline, index) => {
+      {aboutTimelineData.map((timeline, index) => {
         return (
           <SwiperSlide
-            id="slides"
             key={index}
+            id="slides"
             style={{
               width: "347px",
               height: "135px",

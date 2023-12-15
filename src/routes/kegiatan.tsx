@@ -1,20 +1,35 @@
+import Footer from "@/components/beranda/footer";
+import ContactCard from "@/components/contactCard";
+import GuideBook from "@/components/kegiatan/guideBook";
 import HeroSection from "@/components/kegiatan/heroSection";
-import UnderConstruction from "@/routes/underConstruction";
-import { useSearchParams } from "react-router-dom";
+import TimelineSection from "@/components/kegiatan/timelineSection";
+import { kegiatanData } from "@/data/kegiatan";
+import { useSearchParams, useLocation } from "react-router-dom";
 
 export default function Kegiatan() {
   const [searchParams] = useSearchParams();
+  const { pathname } = useLocation();
   const query = searchParams.get("query");
 
   return (
     <>
-      {!query?.includes("debat bahasa indonesia") ? (
-        <UnderConstruction />
-      ) : (
-        <main className="w-full min-h-screen font-inter">
-          <HeroSection />
-        </main>
-      )}
+      {kegiatanData
+        .filter(
+          (data) =>
+            query?.includes(data.title.toLowerCase()) ||
+            pathname.toLowerCase().includes(data.path.toLowerCase())
+        )
+        .map((data, index) => {
+          return (
+            <main key={index} className="w-full min-h-screen font-inter">
+              <HeroSection data={data} />
+              <TimelineSection timlines={data.timeline} />
+              <GuideBook />
+              <ContactCard />
+              <Footer />
+            </main>
+          );
+        })}
     </>
   );
 }

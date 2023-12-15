@@ -1,4 +1,4 @@
-import galeriImage from "@/assets/content/asset.webp";
+import juriLomba from "@/assets/gallery/juri_lomba.webp";
 import { Suspense } from "react";
 import Loading from "../loading";
 
@@ -11,7 +11,7 @@ function GaleriSection() {
       <Suspense fallback={<Loading />}>
         <div className="flex w-full h-64 justify-center">
           <img
-            src={galeriImage}
+            src={juriLomba}
             alt="image"
             width={1446}
             height={392}
