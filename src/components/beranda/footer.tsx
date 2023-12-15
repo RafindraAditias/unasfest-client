@@ -2,6 +2,8 @@ import graphicLogo from "@/assets/logo/graphic-logo-unasfest.webp";
 import unasfestLogo from "@/assets/logo/logo-unasfest.webp";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Phone, Mail } from "lucide-react";
+import { Button } from "../ui/button";
+import { Link } from "react-scroll";
 
 function Footer() {
   return (
@@ -24,24 +26,48 @@ function Footer() {
             </h1>
 
             <div className="hidden w-full lg:flex items-center gap-[18px] justify-center lg:justify-start">
-              <img
-                src="/instagram.png"
-                alt="instagram account"
-                width={30}
-                className="aspect-square max-h-[30px]"
-              />
-              <img
-                src="/youtube.png"
-                alt="youtube channel"
-                width={40}
-                className="aspect-auto max-h-[30px]"
-              />
-              <img
-                src="/tiktok.png"
-                alt="tiktok"
-                width={30}
-                className="aspect-square max-h-[30px]"
-              />
+              <Button
+                variant="link"
+                onClick={() =>
+                  window.open("https://www.instagram.com/unasfest/", "_blank")
+                }
+                className="p-0 hover:scale-110 duration-200"
+              >
+                <img
+                  src="/instagram.png"
+                  alt="instagram account"
+                  width={30}
+                  className="aspect-square max-h-[30px]"
+                />
+              </Button>
+              <Button
+                variant="link"
+                onClick={() =>
+                  window.open("https://www.youtube.com/@unasfest", "_blank")
+                }
+                className="p-0 hover:scale-110 duration-200"
+              >
+                <img
+                  src="/youtube.png"
+                  alt="youtube channel"
+                  width={40}
+                  className="aspect-auto max-h-[30px]"
+                />
+              </Button>
+              <Button
+                variant="link"
+                onClick={() =>
+                  window.open("https://www.tiktok.com/@unasfest", "_blank")
+                }
+                className="p-0 hover:scale-110 duration-200"
+              >
+                <img
+                  src="/tiktok.png"
+                  alt="tiktok"
+                  width={30}
+                  className="aspect-square max-h-[30px]"
+                />
+              </Button>
             </div>
             <p className="hidden lg:block text-xl font-normal leading-6 text-[#333]">
               @Copyright UnasFest 2023
@@ -54,11 +80,46 @@ function Footer() {
             </h1>
             <nav>
               <ul className="flex flex-col gap-6 text-xl font-medium leading-6 text-[#33333399]">
-                <li>Beranda</li>
-                <li>Kompetisi</li>
-                <li>Galeri</li>
-                <li>Sponsorship</li>
-                <li>Tentang Unas Fest</li>
+                <Link
+                  to="beranda"
+                  smooth={false}
+                  offset={-1000}
+                  className="w-fit duration-200 cursor-pointer hover:border-b-4 hover:border-b-active-blue hover:text-active-blue"
+                >
+                  Beranda
+                </Link>
+                <Link
+                  to="kegiatan"
+                  smooth={false}
+                  offset={-100}
+                  className="w-fit duration-200 cursor-pointer hover:border-b-4 hover:border-b-active-blue hover:text-active-blue"
+                >
+                  kompetisi
+                </Link>
+                <Link
+                  to="/galeri"
+                  smooth={false}
+                  offset={-100}
+                  className="w-fit duration-200 cursor-pointer hover:border-b-4 hover:border-b-active-blue hover:text-active-blue"
+                >
+                  Galeri
+                </Link>
+                <Link
+                  to="kegiatan"
+                  smooth={false}
+                  offset={-100}
+                  className="w-fit duration-200 cursor-pointer hover:border-b-4 hover:border-b-active-blue hover:text-active-blue"
+                >
+                  Sponsorship
+                </Link>
+                <Link
+                  to="kegiatan"
+                  smooth={false}
+                  offset={-100}
+                  className="w-fit duration-200 cursor-pointer hover:border-b-4 hover:border-b-active-blue hover:text-active-blue"
+                >
+                  Tentang Unas Fest
+                </Link>
               </ul>
             </nav>
           </div>
@@ -100,24 +161,48 @@ function Footer() {
                 Follow Us on
               </p>
               <div className="w-full flex justify-center items-center gap-[18px] pb-8">
-                <img
-                  src="/instagram.png"
-                  alt="instagram account"
-                  width={30}
-                  className="aspect-square max-h-[30px]"
-                />
-                <img
-                  src="/youtube.png"
-                  alt="youtube channel"
-                  width={40}
-                  className="aspect-square max-h-[30px]"
-                />
-                <img
-                  src="/tiktok.png"
-                  alt="tiktok"
-                  width={30}
-                  className="aspect-square max-h-[30px]"
-                />
+                <Button
+                  variant="link"
+                  onClick={() =>
+                    window.open("https://www.instagram.com/unasfest/", "_blank")
+                  }
+                  className="p-0 hover:scale-110 duration-200"
+                >
+                  <img
+                    src="/instagram.png"
+                    alt="instagram account"
+                    width={30}
+                    className="aspect-square max-h-[30px]"
+                  />
+                </Button>
+                <Button
+                  variant="link"
+                  onClick={() =>
+                    window.open("https://www.youtube.com/@unasfest", "_blank")
+                  }
+                  className="p-0 hover:scale-110 duration-200"
+                >
+                  <img
+                    src="/youtube.png"
+                    alt="youtube channel"
+                    width={40}
+                    className="aspect-square max-h-[30px]"
+                  />
+                </Button>
+                <Button
+                  variant="link"
+                  onClick={() =>
+                    window.open("https://www.tiktok.com/@unasfest", "_blank")
+                  }
+                  className="p-0 hover:scale-110 duration-200"
+                >
+                  <img
+                    src="/tiktok.png"
+                    alt="tiktok"
+                    width={30}
+                    className="aspect-square max-h-[30px]"
+                  />
+                </Button>
               </div>
             </div>
           </div>

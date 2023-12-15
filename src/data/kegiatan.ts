@@ -1,3 +1,13 @@
+// edc judges
+import maftuchah from "@/assets/judges/maftuchah.jpg";
+import jubaidah from "@/assets/judges/jubaidah.jpg";
+import septian from "@/assets/judges/septian.jpg";
+
+// kdbi judges
+import purwo from "@/assets/judges/purwo.jpg";
+import nofia from "@/assets/judges/nofia.jpg";
+import yogi from "@/assets/judges/yogi.jpg";
+
 import kdbiLogo from "@/assets/logo/logo-kdbi.webp";
 import edcLogo from "@/assets/logo/logo-edc.webp";
 import lktiLogo from "@/assets/logo/logo-lkti.webp";
@@ -25,15 +35,39 @@ export const kegiatanData = [
     ],
     judgeData: [
       {
-        name: "Qorina Salmaneta Setya Wulandari",
-        image: qorinaJudge,
+        name: "Purwo Besari S.Pd",
+        image: purwo,
         description:
-          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+          "Merupakan lulusan Sarjana Manajemen Pendidikan (S1 Manajemen Pendidikan) dari Universitas Negeri Jakarta. Memiliki ketertarikan terhadap pendidikan, dengan minat yang besar terhadap pembangunan manusia dan dinamika konten media dan bercita-cita untuk unggul secara bersamaan sebagai spesialis dalam pembelajaran, pelatihan, dan pembuatan konten.",
         achievements: [
-          "Novice Champion of National University Debating Championship (NUDC) 2022.",
-          "President of BEM KM FOB Sampoerna University",
-          "1st place in Wonogiri Regency 2019 NSDC.",
-          "1st runner-up in Region VI NSDC Central Java.",
+          "Peserta Program Musim Panas Universitas Asia Diterbitkan oleh Asia University Taiwan (2019) ",
+          "Menerima Bakti Nusa 9 Penerima Bakti Nusa 9 Dikeluarkan oleh Dompet Dhuafa dengan Program Pengembangan Kepemimpinan bagi aktivis mahasiswa",
+          "Juara 1 Pemilihan Mahasiswa Berprestasi Fakultas Ilmu Pendidikan (2018)",
+          "Juara 1 Lomba Debat Pendidikan Nasional yang diselenggarakan oleh BEM program studi guru sekolah dasar fakultas pendidikan Universitas Pendidikan Indonesia (2018).",
+        ],
+      },
+      {
+        name: "Nofia Fitria M.Si",
+        image: nofia,
+        description:
+          "Merupakan lulusan Sarjana Sains Jurusan Ilmu Politik di Universitas Nasional (2002-2006), Program MA Universitas Mediterania Timur dengan jurusan Hubungan Internasional dan Studi Keamanan (2009-2012), S2 di Universitas Indonesia jurusan Ilmu Politik dan Pemerintahan (2016-2019), S3 di Universitas Indonesia jurusan Ilmu Politik dan Pemerintahan (2020). Beliau adalah pendiri platform Politik Digital eksploitasiicha.id dan bigdatapolitics.id. Memiliki minat penelitian khususnya pada bidang Politik Digital dan Big Data, Kebijakan Publik, dan Politik Global.",
+        achievements: [
+          "Poltekkes Kemenkes Jakarta 3 (Juli 2020 - Februari 2021)",
+          "Magang sebagai Staf Ahli DPR RI (2016)",
+          "Aliansi Kebangsaan sebagai Manager Program/Reseacher (2014)",
+          "Magang sebagai Staf Ahli Kementrian Luar Negeri RI (Februari 2012 - Juni 2012)",
+        ],
+      },
+      {
+        name: "Yogi Syahputra Al-idrus",
+        image: yogi,
+        description:
+          "Merupakan mahasiswa Sarjana Hukum (S1 Hukum) Universitas Muhammadiyah Malang. Memiliki ketertarikan dan motivasi dalam mengelaborasi problematika di dalam kehidupan sosial dan ingin memberikan dampak positif bagi masyarakat luas dengan mengimplementasikan ilmu yang ia pelajari.",
+        achievements: [
+          "Presiden Mahasiswa BEM UMM Periode 2023 - 2024",
+          "Best Paper Internasional Tahun 2023 Student Center. ",
+          "Juara 1 Debat Nasional Festival Politik Tata Negara Di Universitas Negeri Yogyakarta Tahun 2022 Sekaligus Menjadi Best Speaker 3 Dalam Kompetisi Tersebut.",
+          "Juara 2 Meraih Perunggu Di Debat Nasional KDMI Publik Expo Di Universitas Negeri Makassar Tahun 2022.",
         ],
       },
     ],
@@ -59,15 +93,38 @@ export const kegiatanData = [
     ],
     judgeData: [
       {
-        name: "Qorina Salmaneta Setya Wulandari",
-        image: qorinaJudge,
+        name: "Maftuchah Dwi Agustina, S.S., M.Hum.",
+        image: maftuchah,
         description:
-          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+          "Bachelor of English Language and Literature from Darul Ulum University and continued Master degree in linguistics from Darul Ulum University. Currently working as a lecturer of English Literature study program at Nasional University.",
         achievements: [
-          "Novice Champion of National University Debating Championship (NUDC) 2022.",
-          "President of BEM KM FOB Sampoerna University",
-          "1st place in Wonogiri Regency 2019 NSDC.",
-          "1st runner-up in Region VI NSDC Central Java.",
+          "English debate coach of Malang’s Senior High School.",
+          "East Java contingent in NUEDC National, Semarang 2011.",
+          "Semifinalist of NUEDC selection in East Java, Malang 2010.",
+          "First runner up in the East Java Provincial English Debate Competition by the East Java Ministry of Education, Surabaya 2010.",
+        ],
+      },
+      {
+        name: "Jubaidah Aidah, S.Hum.",
+        image: jubaidah,
+        description:
+          "Graduated from Linguistics Literature, Syarif Hidayatullah State Islamic University Jakarta (UIN). Demonstrates a keen inclination towards pursuing a major in either English Linguistics or Public Policy. She works as PPID Operational Staff of Public Relations and Foreign Cooperation Bureau at the Ministry of Maritime Affairs and Fisheries.",
+        achievements: [
+          "Semifinalist of Language Ambassador DKI Jakarta, 2019.",
+          "1st place of English Debate Championship in Jabodetabek area, issued by IIQ Jakarta 2018. ",
+          "Awardee scholarship PPA (Peningkatan Prestasi Akademik) 2018.",
+        ],
+      },
+      {
+        name: "Septian Wijayanti, S.Tr.Kom.",
+        image: septian,
+        description:
+          "Bachelor of Informatics Engineering from Malang State Polytechnic. Currently working at the Indonesian Migrant Worker Job Protection Agency (BP2MI) as a Job Placement Analyst for the America and Pacific Region",
+        achievements: [
+          "Founder @globalyouthvisit and @indipendent.id.",
+          "Indonesia Representative in ASEAN, Korea Frontier Forum at Busan, South Korea 2016.",
+          "Best Speaker National Politechnic English Olympic Surabaya, 2012.",
+          "Champion of East Java Debate Competition at English Week UNESA, 2012.",
         ],
       },
     ],
