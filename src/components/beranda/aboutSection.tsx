@@ -48,9 +48,9 @@ function AboutSection() {
               }}
               className="font-inter text-base font-normal leading-5 text-system-grey-600 mix-blend-difference lg:text-2xl lg:leading-[40px]"
             >
-              Lorem pisum dolor sit amet, consectetur adpisci elit, sed eiusmod
-              tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrum exercitationem ullam corporis suscpit
+              Universitas Nasional Festival 2023 (UNAS FEST 2023) merupakan
+              salah satu kegiatan tahunan yang diadakan untuk memeriahkan serta
+              merayakan Dies Natalis Universitas Nasional ke-74 Tahun.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

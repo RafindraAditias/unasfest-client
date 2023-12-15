@@ -81,7 +81,7 @@ function Footer() {
             </h1>
             <div className="lg:flex hidden gap-3 justify-center py-3 lg:justify-start">
               <Mail className="inline-block lg:hidden" color="#808080" />
-              <p>unasfest2023@gmail.com</p>
+              <p>unasfest2023@civitas.unas.ac.id</p>
             </div>
             <p>
               Jl. Sawo Manila No.61, RT.14/RW.7, Pejaten Bar., Ps. Minggu, Kota
