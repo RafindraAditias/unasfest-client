@@ -2,6 +2,7 @@
 import ErrorBoundary from "@/components/errorBoundary";
 import NotFound from "@/components/notFound";
 import DaftarLomba from "@/routes/daftarLomba";
+import Tentang from "@/routes/tentang";
 import { lazy } from "react";
 import { Route, createRoutesFromElements, json } from "react-router-dom";
 
@@ -47,8 +48,8 @@ export const routesConfig = createRoutesFromElements(
     />
 
     <Route
-      path="ranking"
-      element={<UnderConstruction />}
+      path="tentang"
+      element={<Tentang />}
       errorElement={
         <div className="w-full h-screen grid place-items-center">
           <p>error di Ranking</p>

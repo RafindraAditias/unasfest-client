@@ -13,7 +13,8 @@ export default function Root() {
           getKey={(location) => {
             const paths = [
               "/",
-              "/kegiatan*, '/galeri",
+              "/kegiatan*",
+              "/galeri",
               "/sponsorship",
               "/ranking",
               "/tentang",

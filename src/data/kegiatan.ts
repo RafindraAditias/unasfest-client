@@ -8,6 +8,7 @@ import { kdbiTimelineData } from "./kdbiTimeline";
 
 export const kegiatanData = [
   {
+    path: "KDBI",
     logo: kdbiLogo,
     image: juriLomba,
     title: "Kompetisi Debat Bahasa Indonesia",
@@ -41,6 +42,7 @@ export const kegiatanData = [
   },
 
   {
+    path: "EDC",
     logo: edcLogo,
     image: juriLomba,
     title: "English Debate Competition",
@@ -74,6 +76,7 @@ export const kegiatanData = [
   },
 
   {
+    path: "LKTI",
     logo: lktiLogo,
     image: juriLomba,
     title: "Karya Tulis Ilmiah",
@@ -106,6 +109,7 @@ export const kegiatanData = [
   },
 
   {
+    path: "SEMNAS",
     logo: semnasLogo,
     image: juriLomba,
     title: "Seminar Nasional",

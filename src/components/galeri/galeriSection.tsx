@@ -81,11 +81,13 @@ function GaleriSection() {
     if (imageRef.current && imageRef.current.complete) {
       setImageLoaded(true);
     }
-  }, []);
+  }, [kegiatan, tahunKegiatan]);
 
   const yearFolder = folders.filter((folder) => parseInt(folder));
-  const filteredGallery = Object.entries(gallery).find((data) =>
-    data[0].includes(`${tahunKegiatan}/${kegiatan}`)
+  const filteredGallery = Object.entries(gallery).find(
+    (data) =>
+      data[0].includes(`${tahunKegiatan}/${kegiatan}`) &&
+      (data[1] as string[]).length > 0
   )?.[1];
 
   return (
@@ -137,33 +139,40 @@ function GaleriSection() {
               </SelectContent>
             </Select>
           </div>
-          <Suspense fallback={<p>loading...</p>}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {filteredGallery
-                ? (filteredGallery as string[]).map((image, key) => {
-                    return (
-                      <div key={key}>
-                        {!imageLoaded && <Loading />}
-                        <img
-                          onLoad={() => setImageLoaded(true)}
-                          ref={imageRef}
-                          loading="lazy"
-                          srcSet={image}
-                          id="galeriImages"
-                          src={image}
-                          className={`aspect-square object-cover ${
-                            !imageLoaded && "invisible"
-                          }`}
-                          width={750}
-                          height={480}
-                          alt="galeri kegiatan"
-                        />
-                      </div>
-                    );
-                  })
-                : null}
-            </div>
-          </Suspense>
+
+          <div
+            className={`mt-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${
+              filteredGallery === undefined ? "block" : "grid"
+            } text-center`}
+          >
+            {filteredGallery ? (
+              (filteredGallery as string[]).map((image, key) => {
+                return (
+                  <div key={key}>
+                    {!imageLoaded && <Loading className="w-full" />}
+                    <img
+                      onLoad={() => setImageLoaded(true)}
+                      ref={imageRef}
+                      loading="lazy"
+                      srcSet={image}
+                      id="galeriImages"
+                      src={image}
+                      className={`aspect-square object-cover ${
+                        !imageLoaded && "none"
+                      }`}
+                      width={750}
+                      height={480}
+                      alt="galeri kegiatan"
+                    />
+                  </div>
+                );
+              })
+            ) : (
+              <div className="w-full h-96 border flex justify-center items-center">
+                <p>no image</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
     </Suspense>

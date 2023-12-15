@@ -25,19 +25,19 @@ function Footer() {
 
             <div className="hidden w-full lg:flex items-center gap-[18px] justify-center lg:justify-start">
               <img
-                src="instagram.png"
+                src="/instagram.png"
                 alt="instagram account"
                 width={30}
                 className="aspect-square max-h-[30px]"
               />
               <img
-                src="youtube.png"
+                src="/youtube.png"
                 alt="youtube channel"
                 width={40}
                 className="aspect-auto max-h-[30px]"
               />
               <img
-                src="tiktok.png"
+                src="/tiktok.png"
                 alt="tiktok"
                 width={30}
                 className="aspect-square max-h-[30px]"
@@ -101,19 +101,19 @@ function Footer() {
               </p>
               <div className="w-full flex justify-center items-center gap-[18px] pb-8">
                 <img
-                  src="instagram.png"
+                  src="/instagram.png"
                   alt="instagram account"
                   width={30}
                   className="aspect-square max-h-[30px]"
                 />
                 <img
-                  src="youtube.png"
+                  src="/youtube.png"
                   alt="youtube channel"
                   width={40}
                   className="aspect-square max-h-[30px]"
                 />
                 <img
-                  src="tiktok.png"
+                  src="/tiktok.png"
                   alt="tiktok"
                   width={30}
                   className="aspect-square max-h-[30px]"

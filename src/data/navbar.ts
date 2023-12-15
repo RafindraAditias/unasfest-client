@@ -1,44 +1,40 @@
 export const navData = [
   {
     path: "/",
-    name: "Beranda",
+    title: "Beranda",
   },
   {
-    path: "kegiatan",
-    name: "Kegiatan",
+    path: "/kegiatan",
+    title: "Kegiatan",
     child: [
       {
         name: "Kompetisi Debat Bahasa Indonesia (KDBI)",
-        query: "kompetisi debat bahasa indonesia",
+        href: "/kegiatan/KDBI",
       },
       {
         name: "English Debate Competition (EDC)",
-        query: "english debate competition",
+        href: "/kegiatan/EDC",
       },
       {
         name: "Lomba Karya Tulis Ilmiah",
-        query: "lomba karya tulis ilmiah",
+        href: "/kegiatan/LKTI",
       },
       {
         name: "Seminar Nasional",
-        query: "seminar nasional",
+        href: "/kegiatan/SEMNAS",
       },
     ],
   },
   {
-    path: "galeri",
-    name: "Galeri",
+    path: "/galeri",
+    title: "Galeri",
   },
   {
-    path: "sponsorship",
-    name: "Sponsorship",
+    path: "/sponsorship",
+    title: "Sponsorship",
   },
   {
-    path: "ranking",
-    name: "Ranking",
-  },
-  {
-    path: "tentang",
-    name: "Tentang",
+    path: "/tentang",
+    title: "Tentang",
   },
 ];

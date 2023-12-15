@@ -1,3 +1,5 @@
+import ContactSection from "@/components/beranda/contactSection";
+import Footer from "@/components/beranda/footer";
 import GaleriSection from "@/components/galeri/galeriSection";
 import HeroSection from "@/components/galeri/heroSection";
 import KegiatanSection from "@/components/galeri/kegiatanSection";
@@ -10,6 +12,8 @@ export default function Beranda() {
       <TrailerSection />
       <KegiatanSection />
       <GaleriSection />
+      <ContactSection />
+      <Footer />
     </main>
   );
 }

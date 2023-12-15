@@ -67,7 +67,7 @@ function CompetitionSection() {
                 }`}
               >
                 <div
-                  className="hidden cursor-pointer lg:block"
+                  className="hidden cursor-pointer lg:block overflow-hidden rounded-3xl"
                   onClick={() =>
                     navigate({
                       pathname: "kegiatan",
@@ -82,7 +82,7 @@ function CompetitionSection() {
                     alt="no image"
                     width={350}
                     height={550}
-                    className="rounded-3xl"
+                    className="hover:scale-105 duration-200"
                   />
                 </div>
 
