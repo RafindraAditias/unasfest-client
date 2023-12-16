@@ -92,7 +92,7 @@ function GaleriSection() {
 
   return (
     <Suspense fallback={<p className="w-full h-screen">loading image bang</p>}>
-      <section className="w-full h-fit">
+      <section className="relative mt-20 w-full h-fit">
         <div className="w-4/5 max-w-screen-xl m-auto">
           <h1>Galeri Kilas Balik Unas Fest</h1>
           <div className="flex gap-9">

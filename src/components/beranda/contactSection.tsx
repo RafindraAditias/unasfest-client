@@ -9,12 +9,11 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 function ContactSection() {
   const navigate = useNavigate();
   return (
-    <section className="relative mt-20 lg:overflow-x-clip w-full max-w-screen-xl m-auto lg:w-4/5 lg:mt-40">
+    <section className="relative my-20 lg:overflow-x-clip w-full max-w-screen-xl m-auto lg:w-4/5 lg:mt-40">
       <Card className="custom-card w-[90%] m-auto overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:w-full lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
         <CardTitle className="w-full lg:w-9/12 text-[28px] mb-3 font-semibold !leading-tight tracking-wide md:text-5xl">
           Apakah Kami Dapat Membantu?
@@ -32,14 +31,7 @@ function ContactSection() {
           Ada masalah? Yuk hubungi contact person kami!
         </CardDescription>
         <CardContent className="relative flex justify-start gap-8 p-0">
-          <Button
-            onClick={() => {
-              axios
-                .get("http://localhost:8000/")
-                .then((response) => console.log(response));
-            }}
-            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
-          >
+          <Button className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold">
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
             Contact 1
           </Button>

@@ -1,6 +1,6 @@
 function Visi_misiSection() {
   return (
-    <div className="w-4/5 m-auto h-fit font-inter mt-20 lg:mt-0">
+    <div className="w-4/5 m-auto h-fit font-inter mt-32">
       <div className="text-center w-full m-auto max-w-screen-xl mb-20">
         <h1 className="text-2xl font-semibold leading-10 mb-12 md:text-3xl lg:text-4xl">
           Visi
