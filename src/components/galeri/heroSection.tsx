@@ -11,10 +11,11 @@ import "@/styles/swiperProgressBar.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import Blur from "../ui/blur";
 
 function HeroSection() {
   return (
-    <section className="w-full h-fit">
+    <section className="relative w-full h-fit">
       <div className="flex w-4/5 max-w-screen-xl mt-16 lg:mt-32 xl:mt-48 justify-between m-auto flex-col items-center gap-12 lg:flex-row lg:items-start ">
         <div className="w-full lg:w-[40%]">
           <p className="text-active-blue text-base md:text-xl font-bold leading-normal md:mb-5">
@@ -71,6 +72,11 @@ function HeroSection() {
           </Button>
         </div>
       </div>
+      <Blur className="bg-[#004AAD] top-0 left-0" />
+      <Blur className="bg-[#6CC8FC] -top-48 right-1/2" />
+      <Blur className="bg-[#FFDE59] -bottom-10 right-1/4" />
+      <Blur className="bg-[#00BF63] -bottom-28 left-36" />
+      <Blur className="bg-[#CB6CE6] -top-1/2 right-0" />
     </section>
   );
 }

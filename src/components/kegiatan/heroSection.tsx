@@ -132,9 +132,9 @@ function HeroSection({ data }: Props) {
           <Swiper
             loop
             autoplay={{
-              delay: 2500,
-              pauseOnMouseEnter: true,
+              delay: 5000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
             pagination={{
               type: "bullets",
