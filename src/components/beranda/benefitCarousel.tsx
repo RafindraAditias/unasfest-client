@@ -28,16 +28,15 @@ const BenefitCarousel = () => {
       }}
       className="w-full h-full mx-auto"
     >
-      {benefitData.map((content) => (
-        <SwiperSlide key={content.title}>
+      {benefitData.map(({ Icon, title }) => (
+        <SwiperSlide key={title}>
           <div className="w-full text-center p-5 lg:basis-96">
-            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px]"></div>
+            <div className="w-16 h-16 rounded-full bg-primary-light-a8 m-auto mb-[22px] flex justify-center items-center">
+              <Icon color="#004AAD" size={30} />
+            </div>
             <h1 className="text-[22px] font-semibold tracking-normal mb-4">
-              {content.title}
+              {title}
             </h1>
-            <p className="text-base font-normal tracking-normal leading-6">
-              {content.description}
-            </p>
           </div>
         </SwiperSlide>
       ))}

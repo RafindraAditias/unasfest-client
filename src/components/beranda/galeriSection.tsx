@@ -1,4 +1,4 @@
-import juriLomba from "@/assets/gallery/juri_lomba.webp";
+import juriLomba from "@/assets/gallery/edc_cover.webp";
 import { Suspense } from "react";
 import Loading from "../loading";
 

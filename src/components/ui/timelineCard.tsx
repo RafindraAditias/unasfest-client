@@ -25,7 +25,7 @@ function TimelineCard({ title, description, timelines, children }: Props) {
         <CardDescription className="text-sm tracking-wide font-normal leading-normal mb-16 lg:text-xl">
           {description}
         </CardDescription>
-        <CardContent className="w-full h-full pr-0 overflow-hidden">
+        <CardContent className="w-full h-full pr-0 ">
           <div className="timeline-swiper h-52 pl-14">
             <TimelineCarousel timelines={timelines} />
           </div>

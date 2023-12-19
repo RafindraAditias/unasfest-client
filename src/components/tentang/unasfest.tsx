@@ -1,5 +1,5 @@
 import logo from "@/assets/logo/graphic-logo-unasfest.webp";
-import mascot from "@/assets/icons/maskot.webp";
+import mascot from "@/assets/icons/maskot.png";
 import shapes from "@/assets/random/shape.png";
 import Blur from "../ui/blur";
 

@@ -1,26 +1,47 @@
 // edc judges
-import maftuchah from "@/assets/judges/maftuchah.jpg";
-import jubaidah from "@/assets/judges/jubaidah.jpg";
-import septian from "@/assets/judges/septian.jpg";
+import maftuchah from "@/assets/judges/edc/maftuchah.jpg";
+import jubaidah from "@/assets/judges/edc/jubaidah.jpg";
+import septian from "@/assets/judges/edc/septian.jpg";
 
 // kdbi judges
-import purwo from "@/assets/judges/purwo.jpg";
-import nofia from "@/assets/judges/nofia.jpg";
-import yogi from "@/assets/judges/yogi.jpg";
+import purwo from "@/assets/judges/kdbi/purwo.jpg";
+import nofia from "@/assets/judges/kdbi/nofia.jpg";
+import yogi from "@/assets/judges/kdbi/yogi.jpg";
+
+// lkti judges
+import sri from "@/assets/judges/lkti/sri.png";
+import efriza from "@/assets/judges/lkti/efriza.png";
+import farhan from "@/assets/judges/lkti/farhan.png";
+
+// semnas judges
+import balqis from "@/assets/judges/semnas/balqis.png";
+import hendra from "@/assets/judges/semnas/hendra.png";
+import mary from "@/assets/judges/semnas/mary.png";
+import sugeng from "@/assets/judges/semnas/sugeng.png";
+import tatang from "@/assets/judges/semnas/tatang.png";
+import agnes from "@/assets/judges/semnas/agnes.png";
 
 import kdbiLogo from "@/assets/logo/logo-kdbi.webp";
 import edcLogo from "@/assets/logo/logo-edc.webp";
 import lktiLogo from "@/assets/logo/logo-lkti.webp";
 import semnasLogo from "@/assets/logo/logo-semnas.webp";
-import juriLomba from "@/assets/gallery/juri_lomba.webp";
-import qorinaJudge from "@/assets/gallery/juri_qorina.webp";
-import { kdbiTimelineData } from "./kdbiTimeline";
+import { kdbiTimelineData } from "./timeline/kdbiTimeline";
+import { lktiTimelineData } from "./timeline/lktiTimeline";
+import { semnasTimelineData } from "./timeline/semnasTimeline";
+
+// cover images
+import kdbiCover from "@/assets/gallery/kdbi_cover.webp";
+import edcCover from "@/assets/gallery/edc_cover.webp";
+import lktiCover from "@/assets/gallery/lkti_cover.webp";
+import semnasCover from "@/assets/gallery/semnas_cover.webp";
 
 export const kegiatanData = [
   {
     path: "KDBI",
+    guidebook:
+      "https://drive.google.com/file/d/1Wj6n8Udmk8bfX6WkAro8HncKez7ezqSL/view?usp=sharing",
     logo: kdbiLogo,
-    image: juriLomba,
+    coverImage: kdbiCover,
     title: "Kompetisi Debat Bahasa Indonesia",
     description:
       "Kegiatan Kompetisi Debat Bahasa Indonesia (KDBI) merupakan kompetisi debat berbahasa Indonesia dimana peserta beradu argumen dan pemikiran terkait isu-isu kontemporer dari berbagai aspek yakni sosial, politik, budaya, teknologi, ekonomi, energi, hukum, kesehatan dan lain sebagainya. Oleh karena itu, Kompetisi Debat Bahasa Indonesia (KDBI) bertujuan untuk meningkatkan kemampuan peserta dalam berbicara di depan umum, mengembangkan kemampuan analisis dan berpikir kritis, serta memperkuat keterampilan berargumentasi dengan menggunakan bahasa yang efektif dan persuasif. Kompetisi Debat Bahasa Indonesia (KDBI) akan bertemakan tentang “Implementasi Teknologi dalam Kebijakan Ekonomi Biru untuk...",
@@ -77,8 +98,10 @@ export const kegiatanData = [
 
   {
     path: "EDC",
+    guidebook:
+      "https://drive.google.com/file/d/13kBHOXq8KoI3ottZM4VJS875XBohr1Ui/view?usp=sharing",
     logo: edcLogo,
-    image: juriLomba,
+    coverImage: edcCover,
     title: "English Debate Competition",
     description:
       "The English Debate Competition (EDC) is an English language debate competition where participants debate arguments and thoughts related to contemporary issues from various aspects, namely social, political, cultural, technological, economic, energy, legal, health and so on. Therefore, the English Debate Competition (EDC) aims to improve participants' ability to speak in public, develop analytical and critical thinking skills, and strengthen their ability to argue using effective and persuasive language. The English Debate Competition (EDC) will be held with the theme 'Implementation of Technology in Blue Econo...",
@@ -134,8 +157,10 @@ export const kegiatanData = [
 
   {
     path: "LKTI",
+    guidebook:
+      "https://drive.google.com/file/d/1-eGqXmLhD3lk4UuqvOgTw83bjPC4yQ0S/view?usp=sharing",
     logo: lktiLogo,
-    image: juriLomba,
+    coverImage: lktiCover,
     title: "Karya Tulis Ilmiah",
     description:
       "Lomba Karya Tulis Ilmiah UNAS FEST 2023 adalah salah satu dari tiga acara UNAS FEST 2023 yang berupa kompetisi Karya Tulis ilmiah Tingkat Nasional antar PTN & PTS se-Indonesia. Lomba Karya Tulis Ilmiah adalah kompetisi karya tulis yang diperoleh dari hasil observasi dan penelitian dalam bidang dan metode tertentu, dengan penulisan sistematis dan menggunakan bahasa Indonesia yang baik dan benar serta isinya dapat dipertanggungjawabkan kebenarannya/keilmiahannya.",
@@ -149,26 +174,53 @@ export const kegiatanData = [
     ],
     judgeData: [
       {
-        name: "Qorina Salmaneta Setya Wulandari",
-        image: qorinaJudge,
+        name: "Prof. Dr. Sri Endarti Rahayu, M.Si",
+        image: sri,
         description:
-          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+          "Merupakan guru besar Biologi Universitas Nasional  S1 – Universitas Padjajaran,  S2 – Institut Pertanian Bogor,  S3 – Institut Pertanian Bogor.",
         achievements: [
-          "Novice Champion of National University Debating Championship (NUDC) 2022.",
-          "President of BEM KM FOB Sampoerna University",
-          "1st place in Wonogiri Regency 2019 NSDC.",
-          "1st runner-up in Region VI NSDC Central Java.",
+          "Publikasi 12 Jurnal Internasional",
+          "Publikasi 2 Jurnal Nasional",
+          "Publikasi 3 Prosiding Internasional",
+          "Menulis 4 Buku",
+          "Memperoleh 2 HKI",
+        ],
+      },
+      {
+        name: "Efriza, S.IP, M.Si",
+        image: efriza,
+        description:
+          "Merupakan lulusan Sarjana Ilmu Politik (S1  Ilmu Politik ) dari Universitas Nasional, S2 di Institut Ilmu Sosial dan Ilmu Politik Jakarta (IISIP) jurusan Ilmu Politik (S2 Ilmu Politik). Merupakan  Dosen Tetap Ilmu Pemerintahan, UNPAM PSDKU, Serang, Banten, Maret 2022 s/d sekarang. Dosen Tetap Ilmu Politik, Sekolah Tinggi Ilmu Pemerintahan Abdi Negara (STIP-AN), Oktober 2016 s/d sekarang.",
+        achievements: [
+          "Menulis 13 Buku",
+          "Anggota Asosiasi Ilmu Politik Indonesia (AIPI) Jakarta, 2013 s/d sekarang",
+          "Pendiri dan Direktur, CV Penerbit Kreasi Cendekia Pustaka, 2011 - sekarang",
+          "Kolumnis di Telisik.id 2020 s/d sekarang",
+          "Pendiri Yayasan Studi Cendekia Indonesia (YSCI), 2022 - sekarang",
+        ],
+      },
+      {
+        name: "Farhan Apriansyah",
+        image: farhan,
+        description:
+          "Merupakan mahasiswa Program Studi Biologi angkatan 2019  yang bekerja keras serta bertanggung jawab, pribadi yang senang mencoba dan belajar hal baru, memiliki kemampuan berkomunikasi yang baik dan mempunyai jiwa kepemimpinan",
+        achievements: [
+          "Dosen Tetap Ilmu Pemerintahan, UNPAM PSDKU, Serang, Banten, Maret 2022 s/d sekarang",
+          "Dosen Tetap Ilmu Politik, Sekolah Tinggi Ilmu Pemerintahan Abdi Negara (STIP-AN), Oktober 2016 s/d sekarang",
+          "Dosen Tidak Tetap, Universitas Satya Negara Indonesia (USNI), Fakultas Hubungan Internasional  dan Ilmu Komunikasi (pernah), Februari 2018 s/d sekarang",
+          "Reviewer Jurnal Populis (Sinta 4), Universitas Nasional (UNAS)",
+          "Dosen Tidak Tetap, Universitas Bung Karno (UBK), Fakultas Ilmu Politik, September 2017 s/d 2023",
         ],
       },
     ],
-    timeline: kdbiTimelineData,
+    timeline: lktiTimelineData,
     formPath: "lkti",
   },
 
   {
     path: "SEMNAS",
     logo: semnasLogo,
-    image: juriLomba,
+    coverImage: semnasCover,
     title: "Seminar Nasional",
     description:
       "Seminar merupakan pertemuan kelompok yang membahas dan menemukan solusi dari topik atau masalah yang relevan dengan mempresentasikan dan menjelaskan solusi tersebut yang dilakukan oleh individu yang ahli di bidangnya. Hal yang menjadi topik pembahasan kita saat ini dimana kita akan membahas terkait bagaimana ‘penerapan teknologi di dalam inovasi maritim yang beracuan pada ekonomi biru yang mentransformasikan sistem ekonomi secara menyeluruh’.  Hadirnya penyelenggaraan Seminar Nasional UNAS FEST 2023 yang diselenggarakan oleh Biro Kemahasiswaan dalam merayakan ula...",
@@ -184,19 +236,73 @@ export const kegiatanData = [
     },
     judgeData: [
       {
-        name: "Qorina Salmaneta Setya Wulandari",
-        image: qorinaJudge,
-        description:
-          "Bachelor of Business Administration and Management student from Sampoerna University and University of Arizona. Highly dedicated in fostering leadership and self improvement.",
+        name: "Dr. Mary Ismowati, M.Si ",
+        image: mary,
+        description: "",
         achievements: [
-          "Novice Champion of National University Debating Championship (NUDC) 2022.",
-          "President of BEM KM FOB Sampoerna University",
-          "1st place in Wonogiri Regency 2019 NSDC.",
-          "1st runner-up in Region VI NSDC Central Java.",
+          "Kaprodi Program Magister Administrasi Publik FISIP UNAS",
+          "Kaprodi Program Sarjana Administrasi Publik FISIP UNAS",
+          "Tim Monitoring dan Evaluasi Pelaksanaan Rencana Aksi Kebijakan Kelautan Indonesia",
+          "Liaison Officer (Perwakilan) Kemenko Marves dalam Komite Nasional dan Ekonomi Keuangan Syariah",
+          "Wakil Ketua Tim Koordinasi Nasional Vokasi (TKNV) Revitalisasi Pendidikan & Pelatihan Vokasi,",
+        ],
+      },
+      {
+        name: "Dr.Ir.Sugeng Santoso, MT, QGRGP, CGRP",
+        image: sugeng,
+        description:
+          "doktor ilmu ekonomi yang sejak tahun 2017 menjadi eselon 1 (Staf Ahli Menteri Bidang Ekonomi Maritim), Kementerian Koordinator Bidang Kemaritiman dan Investasi (Kemenko Marves), (ii) sebelumnya menjadi Direktur Akses Non Perbankan dan Ketua Tim Renstra Badan Ekonomi Kreatif (BEKRAF) serta pada saat di BPPT: menjabat Kepala Bidang UKM, Kepala Bidang Daya Saing Industri, Kepala Bagian Evaluasi dan Pelaporan, serta Kepala Bagian Program dan Anggaran",
+        achievements: [
+          "Menjadi peserta Terbaik I Diklat Pimpinan Tk. II (Angkatan VIII Tahun 2016) dan Terbaik I Diklat Pimpinan Tk III (Angkatan XXI Tahun 2010).",
+          "Ketua Pelaksana SDG’s di Kemenko marves",
+          "Tim Monitoring dan Evaluasi Pelaksanaan Rencana Aksi Kebijakan Kelautan Indonesia",
+          "Liaison Officer (Perwakilan) Kemenko Marves dalam Komite Nasional dan Ekonomi Keuangan Syariah",
+          "Wakil Ketua Tim Koordinasi Nasional Vokasi (TKNV) Revitalisasi Pendidikan & Pelatihan Vokasi",
+        ],
+      },
+      {
+        name: "Hendra Yusran Siry, Ph.D",
+        image: hendra,
+        description: "",
+        achievements: [
+          "Kepala Pusat Riset Kelautan, Badan Riset dan Sumber Daya Manusia Kelautan dan Perikanan, Kementerian Kelautan dan Perikanan",
+          "Sekretaris Direktorat Jenderal Pengelolaan Ruang Laut, Kementerian Kelautan dan Perikanan.",
+          "Analis Kerjasama, Sekretariat Direktorat Jenderal Pengelolaan Ruang Laut , Kementerian Kelautan dan Perikanan.",
+          "Interim Executive Director, Regional Secretariat, the Coral Triangle Initiative on Coral Reefs, Fisheries and Food Security (CTI-CFF).",
+        ],
+      },
+      {
+        name: "Dr. Agnes Wirdayanti, SIP, M.Si",
+        image: agnes,
+        description: "",
+        achievements: [
+          "Kepala Pendidikan, Riset Pariwisata dan Ekonomi Kreatif Kedeputian Koordinator Bidang Pariwisata dan Ekonomi Kreatif Kementerian Koordinator Bidang Kemaritiman dan Investasi",
+          "Analisis Kebijakan Ahli Madya Bidang SDM Parekraf Kedeputian Koordinator Bidang Pariwisata dan Ekonomi Kreatif Kementerian Koordinator Bidang Kemaritiman dan Investasi",
+          "Dosen FISIP Universitas Nasional Jakarta",
+        ],
+      },
+      {
+        name: "Dr. Tatang Mitra Setia, M. Si",
+        image: tatang,
+        description: "",
+        achievements: [
+          "Sosialisasi Ekowisata berbasis Biota laut dihadapan Peserta Grup Wisata dari Burung Indonesia di Pulau Pramuka, Kepulauan Seribu",
+          "membuat 4 buku",
+          "4 publikasi ilmiah",
+        ],
+      },
+      {
+        name: "Balqis Ratu Fathona",
+        image: balqis,
+        description: "",
+        achievements: [
+          "Skincare Content Creator",
+          "Makeup Content Creator",
+          "Asisten Laboratorium Kimia",
         ],
       },
     ],
-    timeline: kdbiTimelineData,
+    timeline: semnasTimelineData,
     formPath: "semnas",
   },
 ];

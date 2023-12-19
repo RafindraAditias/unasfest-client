@@ -1,16 +1,21 @@
 import Blur from "../ui/blur";
 import TimelineCard from "../ui/timelineCard";
-import { kdbiTimelineData } from "@/data/kdbiTimeline";
 
+interface ITimeline {
+  title: string;
+  description?: string;
+  date: string;
+}
 interface Props {
-  timlines: typeof kdbiTimelineData;
+  competitionName: string;
+  timlines: ITimeline[];
 }
 
-function TimelineSection({ timlines }: Props) {
+function TimelineSection({ timlines, competitionName }: Props) {
   return (
     <TimelineCard
       title="Timeline"
-      description="Alur kegiatan kompetisi debat bahasa indonesia"
+      description={`Alur kegiatan ${competitionName.toLocaleLowerCase()}`}
       timelines={timlines}
     >
       <Blur className="w-[470px] h-[480px] -bottom-56 right-80 bg-[#004AAD]" />

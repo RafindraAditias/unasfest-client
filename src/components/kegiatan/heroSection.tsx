@@ -20,7 +20,7 @@ function HeroSection({ data }: Props) {
     title,
     logo,
     description,
-    image,
+    coverImage,
     termsAndConditions,
     judgeData,
     seminar,
@@ -52,8 +52,8 @@ function HeroSection({ data }: Props) {
           <CardContent className="p-0">
             <div className="w-full h-[392px] flex">
               <img
-                src={image}
-                alt="kegiatan image"
+                src={coverImage}
+                alt="kegiatan coverImage"
                 className="rounded-3xl w-full object-cover"
               />
             </div>
@@ -144,7 +144,7 @@ function HeroSection({ data }: Props) {
           >
             {judgeData.map(
               ({ name, image, description, achievements }, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="w-4/5">
                   <CardTitle className="text-[#000] text-center lg:text-start">
                     <h3 className="text-xl font-semibold leading-normal lg:text-[32px]">
                       {seminar ? "Pembicara" : "Juri Kompetisi"}
@@ -163,7 +163,7 @@ function HeroSection({ data }: Props) {
                       />
                     </div>
 
-                    <div>
+                    <div className="w-2/3">
                       <h1 className="hidden lg:block text-[32px] font-semibold leading-normal">
                         {name}
                       </h1>

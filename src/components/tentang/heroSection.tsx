@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import image2 from "@/assets/gallery/para_juara_lomba.webp";
 import { Pagination, Navigation } from "swiper/modules";
 
 // Import Swiper styles
@@ -8,7 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/styles/swiperProgressBar.css";
 
-import image1 from "@/assets/gallery/frontview_lomba.webp";
+import image1 from "@/assets/gallery/videotron_kdbi_2.webp";
+import image2 from "@/assets/gallery/para_juara_lomba.webp";
 import Blur from "../ui/blur";
 
 function HeroSection() {
