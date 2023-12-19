@@ -3,7 +3,11 @@ import { Button } from "../ui/button";
 import { DownloadIcon } from "lucide-react";
 import Blur from "../ui/blur";
 
-function GuideBook() {
+interface IGuidebook {
+  guidebook?: string;
+}
+
+function GuideBook({ guidebook }: IGuidebook) {
   return (
     <section className="mt-20">
       <Card className="w-[90%] max-w-screen-xl m-auto text-center py-9 flex flex-col justify-center items-center lg:py-24">
@@ -15,7 +19,10 @@ function GuideBook() {
             Download buku pedoman lomba untuk mengetahui mekanisme keseluruhan
             perlombaan debat Universitas Nasional Festival
           </p>
-          <Button className="gap-3 rounded-[30px] bg-active-blue p-8 mx-10">
+          <Button
+            onClick={() => window.open(guidebook, "_blank")}
+            className="gap-3 rounded-[30px] bg-active-blue p-8 mx-10"
+          >
             <DownloadIcon size={30} />
             <p className="text-[16px] text-[#FFF] font-semibold leading-normal">
               Download disini

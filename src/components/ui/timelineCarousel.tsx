@@ -4,6 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "styles/timelineCarousel.css";
+import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
 export interface timelineCarouselProps {
   timelines: Array<{
@@ -18,14 +19,19 @@ export interface timelineCarouselProps {
 const TimelineCarousel = ({ timelines }: timelineCarouselProps) => {
   return (
     <Swiper
-      slidesPerView="auto"
+      breakpoints={{
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1440: { slidesPerView: 4 },
+      }}
       spaceBetween={30}
       freeMode={true}
       pagination={{
         type: "progressbar",
       }}
       modules={[Pagination]}
-      className="mySwiper"
+      className="timeline-swiper"
     >
       {timelines?.map((timeline, index) => {
         return (
@@ -41,41 +47,31 @@ const TimelineCarousel = ({ timelines }: timelineCarouselProps) => {
           >
             <div className="absolute w-full h-7 bg-white opacity-10 left-20 -rotate-[55deg]"></div>
             <div className="absolute w-full h-7 bg-white opacity-10 left-32 -rotate-[55deg]"></div>
-            <div className="w-full text-[#FFF] text-start my-auto pl-6">
-              <h1 className="text-[22px] font-bold">{timeline.title}</h1>
-              <p className="text-xs font-normal leading-4 py-[10px] text-pretty">
-                {timeline.description}
-              </p>
+            <div className="w-full text-[#FFF] text-start my-auto px-6">
+              <Popover>
+                <PopoverTrigger className="text-start">
+                  <h1 className="text-[22px] font-bold line-clamp-1">
+                    {timeline.title}
+                  </h1>
+                </PopoverTrigger>
+                <PopoverContent className="top-0">
+                  <p>{timeline.title}</p>
+                </PopoverContent>
+              </Popover>
+              <Popover>
+                <PopoverTrigger className="text-start">
+                  <p className="text-xs font-normal leading-4 my-[10px] text-pretty line-clamp-2">
+                    {timeline.description}
+                  </p>
+                </PopoverTrigger>
+                <PopoverContent className="z-[9999]">
+                  <p>{timeline.description}</p>
+                </PopoverContent>
+              </Popover>
               <div className="flex justify-start items-center gap-1 text-lg font-bold">
-                {index === 0 ? (
-                  <>
-                    <p>
-                      {timeline.from?.split(" ")[0]}
-                      <span className="text-sm">
-                        {timeline.from?.split(" ")[1]}
-                      </span>
-                    </p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="34"
-                      height="2"
-                      viewBox="0 0 34 2"
-                      fill="none"
-                    >
-                      <path
-                        d="M0 1H33.5"
-                        stroke="white"
-                        stroke-opacity="0.8"
-                        stroke-dasharray="2 2"
-                      />
-                    </svg>
-                    <p>{timeline.to}</p>
-                  </>
-                ) : (
-                  <>
-                    <p>{timeline.date}</p>
-                  </>
-                )}
+                <p className="text-base">
+                  {timeline.date?.replace("-", "∙∙∙∙∙")}
+                </p>
               </div>
             </div>
           </SwiperSlide>

@@ -3,8 +3,7 @@ export const kdbiTimelineData = [
     title: "Pendaftaran",
     description:
       "Mengisi google form yang sudah disediakan untuk melakukan pendaftaran",
-    from: "1",
-    to: "4 November 2023",
+    date: "1 - 4 November 2023",
   },
 
   {

@@ -23,8 +23,11 @@ export default function Kegiatan() {
           return (
             <main key={index} className="w-full min-h-screen font-inter">
               <HeroSection data={data} />
-              <TimelineSection timlines={data.timeline} />
-              <GuideBook />
+              <TimelineSection
+                competitionName={data.title}
+                timlines={data.timeline}
+              />
+              <GuideBook guidebook={data.guidebook} />
               <ContactCard />
               <Footer />
             </main>

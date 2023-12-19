@@ -1,37 +1,23 @@
 export const faqData = [
   {
-    title: "Dimana saya bisa mendaftar?",
+    title: "Apa itu Kegiatan UNAS FEST?",
     description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. ",
+      "Universitas Nasional Festival 2023 (UNAS FEST 2023) merupakan salah satu kegiatan tahunan yang diadakan untuk memeriahkan serta merayakan Dies Natalis Universitas Nasional ke-74 Tahun. Daftar Perlombaan",
   },
   {
-    title: "Kapan kegiatan UNAS FEST dimulai?",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestias odio sit iusto aut sapiente illum aliquam nihil doloribus possimus!",
+    title: "Kapan acara UNAS FEST 2023 dimulai?",
+    description: "4 Desember 2023",
   },
   {
-    title: "Apakah masih bisa mendaftar kegiatan UNAS FEST?",
-    description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.  ",
+    title: "Dimana lokasi UNAS FEST 2023 diadakan?",
+    description: "Universitas Nasional",
   },
   {
-    title: "Eros imperdiet rhoncus?",
-    description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.  ",
+    title: "Dimana saya bisa mendaftarkan lomba UNAS FEST 2023?",
+    description: "Menghubungi pihak UNAS FEST 2023",
   },
   {
-    title: "Eros imperdiet rhoncus?",
-    description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.  ",
-  },
-  {
-    title: "Eros imperdiet rhoncus?",
-    description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.  ",
-  },
-  {
-    title: "Eros imperdiet rhoncus?",
-    description:
-      "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.  ",
+    title: "Kegiatan UNAS FEST 2023 diadakan oleh siapa?",
+    description: "Universitas Nasional",
   },
 ];

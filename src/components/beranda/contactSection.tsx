@@ -1,5 +1,5 @@
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
-import maskotUnasfest from "@/assets/icons/maskot.webp";
+import maskotUnasfest from "@/assets/icons/maskot.png";
 import {
   Card,
   CardTitle,
@@ -8,10 +8,8 @@ import {
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 
 function ContactSection() {
-  const navigate = useNavigate();
   return (
     <section className="relative my-20 lg:overflow-x-clip w-full max-w-screen-xl m-auto lg:w-4/5 lg:mt-40">
       <Card className="custom-card w-[90%] m-auto overflow-hidden lg:overflow-visible text-start px-6 py-16 lg:w-full lg:px-28 lg:rounded-t-[30px] lg:rounded-b-none">
@@ -31,13 +29,30 @@ function ContactSection() {
           Ada masalah? Yuk hubungi contact person kami!
         </CardDescription>
         <CardContent className="relative flex justify-start gap-8 p-0">
-          <Button className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold">
+          <Button
+            onClick={() =>
+              window.open(
+                `https://wa.me/085840360047?text=${encodeURI(
+                  "Halo kak Emmanuella, bisakah kakak membantu aku seputar unasfest?"
+                )}`,
+                "_blank"
+              )
+            }
+            className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
+          >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />
             Contact 1
           </Button>
 
           <Button
-            onClick={() => navigate("/kegiatan", { preventScrollReset: true })}
+            onClick={() =>
+              window.open(
+                `https://wa.me/085210637393?text=${encodeURI(
+                  "Halo kak Azkia, bisakah kakak membantu aku seputar unasfest?"
+                )}`,
+                "_blank"
+              )
+            }
             className="w-36 h-10 bg-[#00BF63] flex justify-center items-center gap-2 z-10 text-base font-bold"
           >
             <img src={whatsappIcon} alt="whatsapp" width={20} height={20} />

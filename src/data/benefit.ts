@@ -1,14 +1,11 @@
+import { UploadCloud, Watch } from "lucide-react";
 export const benefitData = [
   {
-    image: "",
+    Icon: UploadCloud,
     title: "E-Certificate",
-    description:
-      "Aliquam vehicula pellentesque id mi quam ipsum. Arcu nisl faucibus mattis etiam.",
   },
   {
-    image: "",
+    Icon: Watch,
     title: "Hadiah Jutaan Rupiah",
-    description:
-      "Velit nulla eu tortor elit sed. Volutpat ornare mi tempor, hacmorbi faucibus.",
   },
 ];
